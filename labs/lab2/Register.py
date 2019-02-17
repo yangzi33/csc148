@@ -1,0 +1,89 @@
+from typing import List
+
+over_thirty = []
+
+class Register:
+    '''Race Registry
+    =============
+    Context: a system for organizing a 5K running race.
+
+    When runners register for a race, they provide their name, email address and
+    their speed category. A speed category indicates how quickly they estimate that
+    they can finish the race. This allows organizers to start the runners in groups
+    of roughly equivalent running speed so that faster runners aren't stuck behind
+    slower runners. The possible speed categories are: under 20 minutes, under 30
+    minutes, under 40 minutes, and 40 minutes or over. We need to be able get a list
+    of runners in a given speed category. We also need to be able to look up a
+    runner to find their speed category. Finally, a runner should be able to change
+    their email address and speed category, or withdraw from the race entirely.
+
+    over_thirty: List of runners' names which have records under 30 minutes.
+
+===============================Attributes=======================================
+
+    name: Name of the runner.
+    email: Email address of the runner.
+    speed_category: Speed category of the runner.
+
+===============================Methods==========================================
+
+    new_record: Update the record if it has a faster pace.
+
+================================================================================
+    Note:
+    Speed Categories:   20 > time: 1
+                        20 <= time <30: 2
+                        30 <= time < 40: 3
+                        40 <= time: 4
+
+    >>> r1 = Register('Gerhard', 'gerhard@utoronto.ca', 35)
+    >>> r1.speed_category
+    3
+    >>> r1.name in over_thirty
+    False
+    >>> r2 = Register('Tom', 'tom@utoronto.ca', 25)
+    >>> r2.speed_category
+    2
+    >>> r3 = Register('Toni', 'toni@utoronto.ca', 15)
+    >>> r3.speed_category
+    1
+    >>> r4 = Register('Margot', 'margot@utoronto.ca', 28)
+    >>> r4.speed_category
+    3
+    >>> r1.new_record(28)
+    >>> r1.speed_category
+    2
+    >>> r1.in over_thirty
+    True
+    '''
+
+    name: str
+    email: str
+    speed_category: int
+
+    def __init__(self, name: str, email: str, speed: int):
+        self.name = name
+        self.email = email
+        if speed in range(20):
+            self.speed_category = 1
+            over_thirty.append(name)
+        elif speed in range(30):
+            self.speed_category = 2
+            over_thirty.append(name)
+        elif speed in range(40):
+            self.speed_category = 3
+        else: # > 40
+            self.speed_category = 4
+
+    def new_record(self, new: int):
+        if new < (self.speed_category + 1) * 10:
+            if new in range(20):
+                self.speed_category = 1
+                over_thirty.append(self.name)
+            elif new in range(30):
+                self.speed_category = 2
+                over_thirty.append(self.name)
+            elif new in range(40):
+                self.speed_category = 3
+
+
