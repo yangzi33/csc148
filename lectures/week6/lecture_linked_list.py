@@ -90,10 +90,50 @@ class LinkedList:
 
     def __getitem__(self, index: int) -> Any:
         """Return the item at position <index> in this list.
+        >>> lst1 = LinkedList()
+        >>> lst1.append(1)
+        >>> lst1.append(2)
+        >>> lst1.append(3)
+        >>> lst1[0]
+        1
+        >>> lst1[1]
+        2
+        >>> lst1[2]
+        3
+        >>> lst1[3]
 
         Raise IndexError if <index> is >= the length of this list.
         """
-        pass
+        # i = 0
+        # curr = self._first
+        # while curr is not None:
+        #     if i == index:
+        #         return curr.item
+        #     i += 1
+        #     curr = curr.next
+        # raise IndexError
+
+        # i = index
+        # curr = self._first
+        # while curr is not None and i != 0:
+        #     i -= 1
+        #     curr = curr.next
+        # if i == 0:
+        #     if curr is not None:
+        #         return curr.item
+        # raise IndexError
+
+        # i = index
+        # curr = self._first
+        # while curr is not None and i != 0:
+        #     i -= 1
+        #     curr = curr.next
+        # if curr is None:
+        #     if i >= 0:
+        #         raise IndexError
+        # return curr.item
+
+
 
     def insert(self, index: int, item: Any) -> None:
         """Insert a the given item at the given index in this list.
@@ -101,6 +141,21 @@ class LinkedList:
         Raise IndexError if index > len(self) or index < 0.
         Note that adding to the end of the list is okay.
         """
+        curr = None
+        i = index
+        while curr is not None and i != 0:
+            i -= 1
+            curr = curr.next
+        if curr is None and i > 0:
+            raise IndexError
+        elif curr is None:
+            curr = item
+        elif i == 0:
+            n = curr.next
+            curr = item
+            curr.next = n
+
+
 
     def pop(self, index: int) -> Any:
         """Remove and return the item at position <index>.
