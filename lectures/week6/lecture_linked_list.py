@@ -90,6 +90,7 @@ class LinkedList:
 
     def __getitem__(self, index: int) -> Any:
         """Return the item at position <index> in this list.
+        Raise IndexError if <index> is >= the length of this list.
         >>> lst1 = LinkedList()
         >>> lst1.append(1)
         >>> lst1.append(2)
@@ -101,8 +102,8 @@ class LinkedList:
         >>> lst1[2]
         3
         >>> lst1[3]
-
-        Raise IndexError if <index> is >= the length of this list.
+        Traceback (most recent call last):
+        IndexError
         """
         # i = 0
         # curr = self._first
@@ -123,15 +124,15 @@ class LinkedList:
         #         return curr.item
         # raise IndexError
 
-        # i = index
-        # curr = self._first
-        # while curr is not None and i != 0:
-        #     i -= 1
-        #     curr = curr.next
-        # if curr is None:
-        #     if i >= 0:
-        #         raise IndexError
-        # return curr.item
+        i = index
+        curr = self._first
+        while curr is not None and i != 0:
+            i -= 1
+            curr = curr.next
+        if curr is None:
+            if i >= 0:
+                raise IndexError
+        return curr.item
 
 
 
