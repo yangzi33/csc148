@@ -71,14 +71,15 @@ class RecursiveList:
     def __len__(self) -> int:
         """Return the number of elements in this list.
 
-        >>> lst = RecursiveList([])
-        >>> len(lst) # Equivalent to lst.__len__()
-        0
+        # >>> lst = RecursiveList([])
+        # >>> len(lst) # Equivalent to lst.__len__()
+        # 0
         >>> lst = RecursiveList([1, 2, 3])
         >>> len(lst)
         3
         """
-        pass
+        
+
 
     def __contains__(self, item: Any) -> bool:
         """Return whether <item> is in this list.

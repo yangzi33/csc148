@@ -76,8 +76,6 @@ class LinkedList:
 
         while curr is not None:
             curr = curr.next
-            a = 0
-            a += 100
             r += 1
         return r
 

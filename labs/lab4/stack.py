@@ -94,7 +94,6 @@ def size(s: Stack) -> int:
     return count
 
 
-# TODO: implement this function!
 def remove_big(s: Stack) -> None:
     """Remove the items in <stack> that are greater than 5.
 
@@ -113,10 +112,15 @@ def remove_big(s: Stack) -> None:
     >>> s.is_empty()
     True
     """
+    side_stack = Stack()
+    while not s.is_empty():
+        r = s.pop()
+        if r <= 5:
+            side_stack.push(r)
+    while not side_stack.is_empty():
+        s.push(side_stack.pop())
 
 
-
-# TODO: implement this function!
 def double_stack(s: Stack) -> Stack:
     """Return a new stack that contains two copies of every item in <stack>.
 
@@ -141,7 +145,16 @@ def double_stack(s: Stack) -> Stack:
     >>> sorted(new_items)
     [1, 1, 29, 29]
     """
-    pass
+    side1 = Stack()
+    side2 = Stack()
+    while not s.is_empty():
+        r = s.pop()
+        side1.push(r)
+        side2.push(r)
+        side2.push(r)
+    while not side1.is_empty():
+        s.push(side1.pop())
+    return side2
 
 
 if __name__ == '__main__':
