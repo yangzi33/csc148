@@ -70,6 +70,15 @@ class LinkedList:
             print(curr.item)
             curr = curr.next
 
+    def __len__(self):
+        r = 0
+        curr = self._first
+
+        while curr is not None:
+            curr = curr.next
+            r += 1
+        return r
+
     def __eq__(self, other: LinkedList) -> bool:
         """Return whether this list and the other list are equal.
 
@@ -144,47 +153,60 @@ class LinkedList:
                 raise IndexError
         return curr.item
 
-
-
     def insert(self, index: int, item: Any) -> None:
         """Insert a the given item at the given index in this list.
 
         Raise IndexError if index > len(self) or index < 0.
         Note that adding to the end of the list is okay.
         """
-        curr = None
-        i = index
-        while curr is not None and i != 0:
-            i -= 1
-            curr = curr.next
-        if curr is None and i > 0:
-            raise IndexError
-        elif curr is None:
-            curr = item
-        elif i == 0:
-            n = curr.next
-            curr = item
-            curr.next = n
-
-
+        if len(self) == index:
+            self.append(_Node(item))
+        else:
+            curr = self._first
+            i = index
+            while curr is not None and i != 0:
+                i -= 1
+                curr = curr.next
+            if i == 0:
+                n = curr.next
+                curr.next = _Node(item)
+                curr.next.next = n
+            else:
+                raise IndexError
 
     def pop(self, index: int) -> Any:
         """Remove and return the item at position <index>.
 
         Raise IndexError if index >= len(self) or index < 0.
 
-        >>> lst = LinkedList([1, 2, 10, 200])
+        >>> lst = LinkedList()
+        >>> lst.append(1)
+        >>> lst.append(2)
+        >>> lst.append(10)
+        >>> lst.append(200)
         >>> lst.pop(1)
         2
         >>> lst.pop(2)
         200
-        >>> lst.pop(148)
-        Traceback (most recent call last):
-        IndexError
         >>> lst.pop(0)
         1
+        >>> lst.pop()
+        10
         """
-        pass
+        if index > len(self):
+            raise IndexError
+        else:
+            curr = self._first
+            i = index - 1
+            while curr is not None and i != 0:
+                curr = curr.next
+                i -= 1
+            if i == 0 and curr is not None:
+                r = curr.next
+                curr.next = r.next
+                return r.item
+            else:
+                raise IndexError
 
     def remove(self, item: Any) -> None:
         """Remove the FIRST occurrence of <item> in this list.
@@ -211,10 +233,14 @@ class LinkedList:
         """
         pass
 
+    def __str__(self):
+        a = ' -> '.join(str(self[i]) for i in range(len(self)))
+        return '[' + a + ']'
+
 
 if __name__ == '__main__':
-    # import python_ta
-    # python_ta.check_all()
+    import python_ta
+    python_ta.check_all()
 
     import doctest
     doctest.testmod()

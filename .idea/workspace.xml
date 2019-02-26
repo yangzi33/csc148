@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd863ddc-780d-425e-b0d2-59f761ade103" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/labs/lab6/nested.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/lab6/recursive_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lectures/week6/lecture_linked_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/lectures/week6/lecture_linked_list.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,8 +14,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/csc148$Doctest_LinkedList_remove.coverage" NAME="Doctest LinkedList.remove Coverage Results" MODIFIED="1551148863165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lectures/week6" />
+    <SUITE FILE_PATH="coverage/csc148$Doctest_LinkedList_remove.coverage" NAME="Doctest LinkedList.remove Coverage Results" MODIFIED="1551152517442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lectures/week6" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_LinkedList___eq__.coverage" NAME="Doctest LinkedList.__eq__ Coverage Results" MODIFIED="1551149431245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lectures/week6" />
+    <SUITE FILE_PATH="coverage/csc148$Doctest_LinkedList_pop.coverage" NAME="Doctest LinkedList.pop Coverage Results" MODIFIED="1551155194960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lectures/week6" />
     <SUITE FILE_PATH="coverage/csc148$Doctests_in_Spinner.coverage" NAME="Doctests in Spinner Coverage Results" MODIFIED="1551067546685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preps/prep2" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_LinkedList___getitem__.coverage" NAME="Doctest LinkedList.__getitem__ Coverage Results" MODIFIED="1550982310352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lectures/week6" />
   </component>
@@ -21,8 +25,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lectures/week6/lecture_linked_list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+            <state relative-caret-position="418">
+              <caret line="209" lean-forward="true" selection-start-line="209" selection-end-line="209" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labs/lab6/nested.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1170">
+              <caret line="78" column="8" lean-forward="true" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labs/lab6/recursive_list.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="254" column="27" selection-start-line="254" selection-start-column="27" selection-end-line="254" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -52,12 +74,27 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>len</find>
+      <find>str</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/labs/lab6/nested.py" />
+        <option value="$PROJECT_DIR$/labs/lab6/recursive_list.py" />
         <option value="$PROJECT_DIR$/lectures/week6/lecture_linked_list.py" />
       </list>
     </option>
@@ -83,13 +120,13 @@
             <path>
               <item name="csc148" type="b2602c69:ProjectViewProjectNode" />
               <item name="csc148" type="462c0819:PsiDirectoryNode" />
-              <item name="preps" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="csc148" type="b2602c69:ProjectViewProjectNode" />
               <item name="csc148" type="462c0819:PsiDirectoryNode" />
-              <item name="preps" type="462c0819:PsiDirectoryNode" />
-              <item name="prep2" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="lab6" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="csc148" type="b2602c69:ProjectViewProjectNode" />
@@ -122,7 +159,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Doctest LinkedList.__eq__">
+  <component name="RunManager" selected="Python tests.Doctest LinkedList.pop">
     <configuration name="Doctest LinkedList.__eq__" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <module name="csc148" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,6 +192,25 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lectures/week6/lecture_linked_list.py" />
       <option name="CLASS_NAME" value="LinkedList" />
       <option name="METHOD_NAME" value="__getitem__" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Doctest LinkedList.pop" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+      <module name="csc148" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lectures/week6" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lectures/week6/lecture_linked_list.py" />
+      <option name="CLASS_NAME" value="LinkedList" />
+      <option name="METHOD_NAME" value="pop" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -201,8 +257,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Doctest LinkedList.__eq__" />
+        <item itemvalue="Python tests.Doctest LinkedList.pop" />
         <item itemvalue="Python tests.Doctest LinkedList.remove" />
+        <item itemvalue="Python tests.Doctest LinkedList.__eq__" />
         <item itemvalue="Python tests.Doctests in Spinner" />
         <item itemvalue="Python tests.Doctest LinkedList.__getitem__" />
       </list>
@@ -221,44 +278,44 @@
       <workItem from="1550787898888" duration="26000" />
       <workItem from="1550884377825" duration="3196000" />
       <workItem from="1550982491246" duration="598000" />
-      <workItem from="1551015278537" duration="1438000" />
+      <workItem from="1551015278537" duration="6171000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Doctest_LinkedList___eq__ - 2019.02.25 at 21h 43m 50s.xml">
-      <configuration name="Doctest LinkedList.__eq__" configurationId="tests" />
+    <history-entry file="Doctest_LinkedList_pop - 2019.02.25 at 23h 13m 26s.xml">
+      <configuration name="Doctest LinkedList.pop" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_LinkedList___eq__ - 2019.02.25 at 21h 44m 58s.xml">
-      <configuration name="Doctest LinkedList.__eq__" configurationId="tests" />
+    <history-entry file="Doctest_LinkedList_pop - 2019.02.25 at 23h 14m 34s.xml">
+      <configuration name="Doctest LinkedList.pop" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_LinkedList___eq__ - 2019.02.25 at 21h 45m 17s.xml">
-      <configuration name="Doctest LinkedList.__eq__" configurationId="tests" />
+    <history-entry file="Doctest_LinkedList_pop - 2019.02.25 at 23h 15m 19s.xml">
+      <configuration name="Doctest LinkedList.pop" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_LinkedList___eq__ - 2019.02.25 at 21h 46m 07s.xml">
-      <configuration name="Doctest LinkedList.__eq__" configurationId="tests" />
+    <history-entry file="Doctest_LinkedList_pop - 2019.02.25 at 23h 16m 00s.xml">
+      <configuration name="Doctest LinkedList.pop" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_LinkedList___eq__ - 2019.02.25 at 21h 46m 27s.xml">
-      <configuration name="Doctest LinkedList.__eq__" configurationId="tests" />
+    <history-entry file="Doctest_LinkedList_pop - 2019.02.25 at 23h 22m 34s.xml">
+      <configuration name="Doctest LinkedList.pop" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_LinkedList___eq__ - 2019.02.25 at 21h 46m 52s.xml">
-      <configuration name="Doctest LinkedList.__eq__" configurationId="tests" />
+    <history-entry file="Doctest_LinkedList_pop - 2019.02.25 at 23h 24m 19s.xml">
+      <configuration name="Doctest LinkedList.pop" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_LinkedList___eq__ - 2019.02.25 at 21h 48m 02s.xml">
-      <configuration name="Doctest LinkedList.__eq__" configurationId="tests" />
+    <history-entry file="Doctest_LinkedList_pop - 2019.02.25 at 23h 24m 39s.xml">
+      <configuration name="Doctest LinkedList.pop" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_LinkedList___eq__ - 2019.02.25 at 21h 49m 12s.xml">
-      <configuration name="Doctest LinkedList.__eq__" configurationId="tests" />
+    <history-entry file="Doctest_LinkedList_pop - 2019.02.25 at 23h 24m 52s.xml">
+      <configuration name="Doctest LinkedList.pop" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_LinkedList___eq__ - 2019.02.25 at 21h 49m 24s.xml">
-      <configuration name="Doctest LinkedList.__eq__" configurationId="tests" />
+    <history-entry file="Doctest_LinkedList_pop - 2019.02.25 at 23h 25m 04s.xml">
+      <configuration name="Doctest LinkedList.pop" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_LinkedList___eq__ - 2019.02.25 at 21h 50m 31s.xml">
-      <configuration name="Doctest LinkedList.__eq__" configurationId="tests" />
+    <history-entry file="Doctest_LinkedList_pop - 2019.02.25 at 23h 26m 35s.xml">
+      <configuration name="Doctest LinkedList.pop" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5258000" />
+    <option name="totallyTimeSpent" value="9991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="23" width="1391" height="877" extended-state="0" />
@@ -269,7 +326,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3299363" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -308,10 +365,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab6/nested.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="78" column="8" lean-forward="true" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab6/recursive_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="254" column="27" selection-start-line="254" selection-start-column="27" selection-end-line="254" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lectures/week6/lecture_linked_list.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+        <state relative-caret-position="418">
+          <caret line="209" lean-forward="true" selection-start-line="209" selection-end-line="209" />
         </state>
       </provider>
     </entry>
