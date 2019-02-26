@@ -86,7 +86,17 @@ class LinkedList:
         >>> lst1.__eq__(lst2)
         True
         """
-        pass
+        curr1 = self._first
+        curr2 = other._first
+
+        while not (curr1 is None or curr2 is None):
+            if curr1.item == curr2.item:
+                curr1 = curr1.next
+                curr2 = curr2.next
+            else:
+                return False
+        return curr1 is curr2
+
 
     def __getitem__(self, index: int) -> Any:
         """Return the item at position <index> in this list.
