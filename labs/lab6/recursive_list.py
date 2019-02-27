@@ -78,7 +78,20 @@ class RecursiveList:
         >>> len(lst)
         3
         """
-        
+        if self.is_empty():
+            return 0
+
+
+
+
+
+
+
+        # r = 0
+        # while not self.is_empty():
+        #     r += 1
+        #     self._first = self._rest
+        # return r
 
 
     def __contains__(self, item: Any) -> bool:
@@ -134,7 +147,12 @@ class RecursiveList:
         ...
         IndexError
         """
-        pass
+        if self.is_empty():
+            pass
+        elif index == 0:
+            pass
+        else:
+
 
     ###########################################################################
     # Mutating methods: these methods modify the the list

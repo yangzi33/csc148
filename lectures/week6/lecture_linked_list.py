@@ -159,8 +159,12 @@ class LinkedList:
         Raise IndexError if index > len(self) or index < 0.
         Note that adding to the end of the list is okay.
         """
+        n = _Node(item)
         if len(self) == index:
-            self.append(_Node(item))
+            self.append(n)
+        elif index == 0:
+            n.next = self._first
+            self._first.next = n
         else:
             curr = self._first
             i = index
@@ -169,7 +173,7 @@ class LinkedList:
                 curr = curr.next
             if i == 0:
                 n = curr.next
-                curr.next = _Node(item)
+                curr.next = n
                 curr.next.next = n
             else:
                 raise IndexError

@@ -133,6 +133,17 @@ class LinkedList:
                 # Update links to insert new node
                 curr.next, new_node.next = new_node, curr.next
 
+    def reverse(self):
+
+        curr = self._first
+        while curr.next is not None:
+            last = curr
+            curr = curr.next
+        n = curr
+        # curr.next =
+
+
+
     # ------------------------------------------------------------------------
     # Lab Task 1
     # ------------------------------------------------------------------------

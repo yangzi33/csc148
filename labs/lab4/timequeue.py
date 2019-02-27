@@ -10,7 +10,6 @@ to enqueue or dequeue grows as the queue size grows.
 """
 from timeit import timeit
 from typing import List, Tuple
-
 from myqueue import Queue
 
 

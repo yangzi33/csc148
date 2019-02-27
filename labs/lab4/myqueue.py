@@ -23,9 +23,11 @@ class Queue:
     Stores data in a first-in, first-out order. When removing an item from the
     queue, the most recently-added item is the one that is removed.
     """
+    _items: List
+
     def __init__(self) -> None:
         """Initialize a new empty queue."""
-        pass
+        self._items = []
 
     def is_empty(self) -> bool:
         """Return whether this queue contains no items.
@@ -37,12 +39,12 @@ class Queue:
         >>> q.is_empty()
         False
         """
-        pass
+        return self._items == []
 
     def enqueue(self, item: Any) -> None:
         """Add <item> to the back of this queue.
         """
-        pass
+        self._items.append(item)
 
     def dequeue(self) -> Optional[Any]:
         """Remove and return the item at the front of this queue.
@@ -56,7 +58,7 @@ class Queue:
         >>> q.dequeue()
         'hello'
         """
-        pass
+        return self._items.pop(0)
 
 
 def product(integer_queue: Queue) -> int:
@@ -75,7 +77,10 @@ def product(integer_queue: Queue) -> int:
     >>> q.is_empty()
     True
     """
-    pass
+    r = 1
+    while not integer_queue.is_empty():
+        r = r * integer_queue.dequeue()
+    return r
 
 
 def product_star(integer_queue: Queue) -> int:
@@ -93,7 +98,16 @@ def product_star(integer_queue: Queue) -> int:
     >>> prime_line.is_empty()
     False
     """
-    pass
+    r = 1
+    side = Queue()
+    while not integer_queue.is_empty():
+        n = integer_queue.dequeue()
+        r = r * n
+        side.enqueue(n)
+        # integer_queue.enqueue(n)
+    while not side.is_empty():
+        integer_queue.enqueue(side.dequeue())
+    return r
 
 
 if __name__ == '__main__':
