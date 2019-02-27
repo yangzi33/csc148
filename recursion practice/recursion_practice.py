@@ -1,3 +1,5 @@
+from typing import *
+
 def palindrome(s: str) -> bool:
     """
     >>> palindrome('moon')
@@ -5,21 +7,30 @@ def palindrome(s: str) -> bool:
     >>> palindrome('noon')
     True
     """
-    pass
+    if not s:
+        return True
+    return s[0] == s[-1] and palindrome(s[1:-1])
 
 def reverse_words(s):
     """
     >>> reverse_words('qwertyuiop')
     'poiuytrewq'
     """
-    pass
+    if len(s) == 1:
+        return s
+    else:
+        return reverse_words(s[1:]) + s[0]
+
 
 def length(s) -> int:
     """
     >>> length('abc')
     3
     """
-    pass
+    if len(s) == 1:
+        return 1
+    else:
+        return len(s[1:]) + 1
 
 
 def sum_of_digit(x: int) -> int:
@@ -32,7 +43,10 @@ def sum_of_digit(x: int) -> int:
     >>> sum_of_digit(145)
     10
     """
-    pass
+    if x == 1:
+        return x
+    else:
+        return sum_of_digit(int(x / 10)) + x % 10
 
 
 def sum_n(n: int) -> int:
@@ -42,7 +56,10 @@ def sum_n(n: int) -> int:
     >>> sum_n(5)
     15
     """
-    pass
+    if n == 1:
+        return 1
+    else:
+        return sum_n(n - 1) + n
 
 
 def product_n(n: int) -> int:
@@ -52,7 +69,10 @@ def product_n(n: int) -> int:
     >>> product_n(2)
     2
     """
-    pass
+    if n == 1:
+        return 1
+    else:
+        return product_n(n - 1) * n
 
 
 def count_zero(list_: list) -> int:
@@ -64,17 +84,28 @@ def count_zero(list_: list) -> int:
     >>> count_zero([0, 1, 2, 3])
     1
     """
-    pass
+    # c = 0
+    # for i in list_:
+    #     if i == 0:
+    #         c += 1
+    # return c
 
 
-def find_min(l: list) -> list:
+
+
+
+
+def find_min(l) -> int:
     """ Return the minimum element in l.
     >>> find_min([1, 2, 3])
     1
     >>> find_min([2, 3, 4])
     2
     """
-    pass
+    if len(l) == 1:
+        return l[0]
+    else:
+        return min(l[0], find_min(l[1:]))
 
 
 def count_lists(l: list) -> int:
@@ -82,15 +113,28 @@ def count_lists(l: list) -> int:
     >>> count_lists([5, [2, 1], []])
     3
     """
-    pass
+    if isinstance(l[0], list):
+        return 1
+    else:
+        c = 0
+        for sublist in l:
+            c += count_lists(l[1:])
 
+        return c
 
 def count_odd(obj) -> int:
     """ Return number of odd element in obj.
     >>> count_odd([1, [2, 3], [4, 5]])
     3
     """
-    pass
+    if isinstance(obj, int):
+        return obj % 2
+    else:
+        c = 0
+        for sublist in obj:
+            c += count_odd(sublist)
+
+        return c
 
 
 def depth(obj) -> int:
@@ -101,13 +145,18 @@ def depth(obj) -> int:
     """
     pass
 
-
 def gather_items(obj) -> list:
     """ Return one list that contains all elements in the nested list object
     >>> gather_items([1, 2, [3, 4]])
     [1, 2, 3, 4]
     """
-    pass
+    if isinstance(obj, int):
+        return [obj]
+    else:
+        r = []
+        for sublist in obj:
+            r += gather_items(sublist)
+        return r
 
 
 def gather_odds(obj) -> list:
@@ -115,7 +164,14 @@ def gather_odds(obj) -> list:
     >>> gather_odds([1, [2, 3, [5]]])
     [1, 3, 5]
     """
-    pass
+    if isinstance(obj, int):
+        return [obj]
+    else:
+        r = []
+        for sublist in obj:
+            if gather_odds(sublist)[0] % 2 == 1:
+                r += gather_odds(sublist)
+        return r
 
 
 def convert_to_str(obj) -> None:
@@ -125,7 +181,6 @@ def convert_to_str(obj) -> None:
     >>> list_ == ['1', '2', ['3', '4']]
     True
     """
-    pass
 
 
 def get_depth_d(obj, d: int) -> list:
@@ -148,7 +203,7 @@ def count_below_depth(obj, d) -> int:
     4
     """
     pass
-    
+
 def is_prime(n, k=2):
     if n == 1:
         return False
