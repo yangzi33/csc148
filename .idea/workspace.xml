@@ -2,6 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd863ddc-780d-425e-b0d2-59f761ade103" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/labs/lab4/2016.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/lab5/2016.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labs/lab7/linked_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/midterm/inheri_oneanother.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/midterm/linked_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csc148.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csc148.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/lab5/linked_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/labs/lab5/linked_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/lab5/time_lists.py" beforeDir="false" afterPath="$PROJECT_DIR$/labs/lab5/time_lists.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labs/lab6/recursive_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/labs/lab6/recursive_list.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recursion practice/recursion_practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/recursion practice/recursion_practice.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +38,9 @@
     <SUITE FILE_PATH="coverage/csc148$Doctest_depth.coverage" NAME="Doctest depth Coverage Results" MODIFIED="1551285056261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recursion practice" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_Queue_is_empty.coverage" NAME="Doctest Queue.is_empty Coverage Results" MODIFIED="1551215460799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/labs/lab4" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_find_min.coverage" NAME="Doctest find_min Coverage Results" MODIFIED="1551284588778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recursion practice" />
+    <SUITE FILE_PATH="coverage/csc148$Doctest_LinkedListIterator___next__.coverage" NAME="Doctest LinkedListIterator.__next__ Coverage Results" MODIFIED="1551367058559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/labs/lab7" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_count_odd.coverage" NAME="Doctest count_odd Coverage Results" MODIFIED="1551284910568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recursion practice" />
-    <SUITE FILE_PATH="coverage/csc148$Doctest_RecursiveList___len__.coverage" NAME="Doctest RecursiveList.__len__ Coverage Results" MODIFIED="1551224229730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/labs/lab6" />
+    <SUITE FILE_PATH="coverage/csc148$Doctest_RecursiveList___len__.coverage" NAME="Doctest RecursiveList.__len__ Coverage Results" MODIFIED="1551367617983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/labs/lab6" />
     <SUITE FILE_PATH="coverage/csc148$Doctests_in_Spinner.coverage" NAME="Doctests in Spinner Coverage Results" MODIFIED="1551067546685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preps/prep2" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_nested_list_equal.coverage" NAME="Doctest nested_list_equal Coverage Results" MODIFIED="1551161078878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/labs/lab6" />
     <SUITE FILE_PATH="coverage/csc148$timequeue.coverage" NAME="timequeue Coverage Results" MODIFIED="1551216048380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/labs/lab4" />
@@ -37,11 +48,14 @@
     <SUITE FILE_PATH="coverage/csc148$Doctest_gather_items.coverage" NAME="Doctest gather_items Coverage Results" MODIFIED="1551285516908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recursion practice" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_palindrome__1_.coverage" NAME="Doctest palindrome (1) Coverage Results" MODIFIED="1551249965688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recursion practice" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_double_stack.coverage" NAME="Doctest double_stack Coverage Results" MODIFIED="1551213312146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/labs/lab4" />
+    <SUITE FILE_PATH="coverage/csc148$Doctests_in_LinkedListIterator.coverage" NAME="Doctests in LinkedListIterator Coverage Results" MODIFIED="1551366936602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/labs/lab7" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_reverse_words.coverage" NAME="Doctest reverse_words Coverage Results" MODIFIED="1551283223650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recursion practice" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_count_zero.coverage" NAME="Doctest count_zero Coverage Results" MODIFIED="1551284350410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recursion practice" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_duplicate.coverage" NAME="Doctest duplicate Coverage Results" MODIFIED="1551206052313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/labs/lab6" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_sum_of_digit__1_.coverage" NAME="Doctest sum_of_digit (1) Coverage Results" MODIFIED="1551283765228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recursion practice" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_convert_to_str.coverage" NAME="Doctest convert_to_str Coverage Results" MODIFIED="1551286111838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recursion practice" />
+    <SUITE FILE_PATH="coverage/csc148$2016.coverage" NAME="2016 Coverage Results" MODIFIED="1551298769071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/labs/lab4" />
+    <SUITE FILE_PATH="coverage/csc148$Doctest_add_one.coverage" NAME="Doctest add_one Coverage Results" MODIFIED="1551300848776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/recursion practice" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_add_n.coverage" NAME="Doctest add_n Coverage Results" MODIFIED="1551160732762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/labs/lab6" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_product.coverage" NAME="Doctest product Coverage Results" MODIFIED="1551215473826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/labs/lab4" />
   </component>
@@ -50,44 +64,71 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lectures/week6/lecture_linked_list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="169" column="21" lean-forward="true" selection-start-line="169" selection-start-column="21" selection-end-line="169" selection-end-column="21" />
+            <state relative-caret-position="3450">
+              <caret line="230" column="25" lean-forward="true" selection-start-line="230" selection-start-column="25" selection-end-line="230" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/lab6/nested.py">
+        <entry file="file://$PROJECT_DIR$/midterm/linked_list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1335">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="187">
+              <caret line="199" column="46" selection-start-line="199" selection-start-column="46" selection-end-line="199" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/lab6/recursive_list.py">
+        <entry file="file://$PROJECT_DIR$/labs/lab5/time_lists.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="308">
+              <caret line="28" column="91" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="91" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/recursion practice/recursion_practice.py">
+        <entry file="file://$PROJECT_DIR$/labs/lab6/recursive_list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="747">
-              <caret line="183" column="4" selection-start-line="183" selection-start-column="4" selection-end-line="183" selection-end-column="4" />
+            <state relative-caret-position="135">
+              <caret line="285" column="34" selection-start-line="285" selection-start-column="34" selection-end-line="285" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recursion practice/recursion_practice_solutions.py">
+        <entry file="file://$PROJECT_DIR$/recursion practice/recursion_practice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3879">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state relative-caret-position="243">
+              <caret line="248" column="9" lean-forward="true" selection-start-line="248" selection-start-column="9" selection-end-line="248" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labs/lab4/timequeue.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/labs/lab7/linked_list.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="213" column="34" lean-forward="true" selection-start-line="213" selection-start-column="34" selection-end-line="213" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/midterm/inheri_oneanother.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -95,26 +136,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/labs/lab5/linked_list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/docrunner.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="139" selection-start-line="139" selection-end-line="139" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/lab4/myqueue.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+            <state relative-caret-position="457">
+              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
             </state>
           </provider>
         </entry>
@@ -123,15 +146,6 @@
         <entry file="file://$PROJECT_DIR$/labs/lab4/stack.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-406" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/labs/lab4/timequeue.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1240">
-              <caret line="62" column="68" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
-            </state>
           </provider>
         </entry>
       </file>
@@ -148,6 +162,7 @@
     <findStrings>
       <find>len</find>
       <find>str</find>
+      <find>__get</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,14 +172,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/labs/lab6/nested.py" />
-        <option value="$PROJECT_DIR$/labs/lab5/time_lists.py" />
         <option value="$PROJECT_DIR$/labs/lab4/stack.py" />
         <option value="$PROJECT_DIR$/labs/lab4/myqueue.py" />
         <option value="$PROJECT_DIR$/labs/lab4/timequeue.py" />
         <option value="$PROJECT_DIR$/lectures/week6/lecture_linked_list.py" />
-        <option value="$PROJECT_DIR$/labs/lab6/recursive_list.py" />
+        <option value="$PROJECT_DIR$/midterm/inheri_oneanother.py" />
+        <option value="$PROJECT_DIR$/labs/lab4/2016.py" />
         <option value="$PROJECT_DIR$/labs/lab5/linked_list.py" />
+        <option value="$PROJECT_DIR$/labs/lab5/2016.py" />
+        <option value="$PROJECT_DIR$/midterm/linked_list.py" />
         <option value="$PROJECT_DIR$/recursion practice/recursion_practice.py" />
+        <option value="$PROJECT_DIR$/labs/lab5/time_lists.py" />
+        <option value="$PROJECT_DIR$/labs/lab7/linked_list.py" />
+        <option value="$PROJECT_DIR$/labs/lab6/recursive_list.py" />
       </list>
     </option>
   </component>
@@ -203,6 +223,17 @@
             <path>
               <item name="csc148" type="b2602c69:ProjectViewProjectNode" />
               <item name="csc148" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="lab7" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc148" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc148" type="462c0819:PsiDirectoryNode" />
+              <item name="midterm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc148" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc148" type="462c0819:PsiDirectoryNode" />
               <item name="recursion practice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -236,8 +267,68 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Doctest convert_to_str">
-    <configuration name="Doctest convert_to_str" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Doctest RecursiveList.__len__">
+    <configuration name="2016" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="csc148" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/labs/lab4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/labs/lab4/2016.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Doctest LinkedListIterator.__next__" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+      <module name="csc148" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/labs/lab7" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/labs/lab7/linked_list.py" />
+      <option name="CLASS_NAME" value="LinkedListIterator" />
+      <option name="METHOD_NAME" value="__next__" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Doctest RecursiveList.__len__" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+      <module name="csc148" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/labs/lab6" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/labs/lab6/recursive_list.py" />
+      <option name="CLASS_NAME" value="RecursiveList" />
+      <option name="METHOD_NAME" value="__len__" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Doctest add_one" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <module name="csc148" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -249,96 +340,39 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recursion practice/recursion_practice.py" />
       <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="convert_to_str" />
+      <option name="METHOD_NAME" value="add_one" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_FUNCTION" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Doctest depth" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+    <configuration name="Doctests in LinkedListIterator" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <module name="csc148" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recursion practice" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/labs/lab7" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recursion practice/recursion_practice.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="depth" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/labs/lab7/linked_list.py" />
+      <option name="CLASS_NAME" value="LinkedListIterator" />
+      <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_FUNCTION" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Doctest gather_items" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
-      <module name="csc148" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recursion practice" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recursion practice/recursion_practice.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="gather_items" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_FUNCTION" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Doctest gather_odds (1)" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
-      <module name="csc148" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recursion practice" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recursion practice/recursion_practice.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="gather_odds" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_FUNCTION" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Doctest gather_odds" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
-      <module name="csc148" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/recursion practice" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recursion practice/recursion_practice.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="gather_odds" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_FUNCTION" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Doctest convert_to_str" />
-        <item itemvalue="Python tests.Doctest gather_odds" />
-        <item itemvalue="Python tests.Doctest gather_odds (1)" />
-        <item itemvalue="Python tests.Doctest gather_items" />
-        <item itemvalue="Python tests.Doctest depth" />
+        <item itemvalue="Python tests.Doctest RecursiveList.__len__" />
+        <item itemvalue="Python tests.Doctest LinkedListIterator.__next__" />
+        <item itemvalue="Python tests.Doctests in LinkedListIterator" />
+        <item itemvalue="Python tests.Doctest add_one" />
+        <item itemvalue="Python.2016" />
       </list>
     </recent_temporary>
   </component>
@@ -356,44 +390,44 @@
       <workItem from="1550884377825" duration="3196000" />
       <workItem from="1550982491246" duration="598000" />
       <workItem from="1551015278537" duration="16018000" />
-      <workItem from="1551213363858" duration="9739000" />
+      <workItem from="1551213363858" duration="19972000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Doctest_gather_odds - 2019.02.27 at 11h 39m 53s.xml">
-      <configuration name="Doctest gather_odds" configurationId="tests" />
+    <history-entry file="Doctest_LinkedListIterator___next__ - 2019.02.28 at 10h 17m 26s.xml">
+      <configuration name="Doctest LinkedListIterator.__next__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_gather_odds - 2019.02.27 at 11h 40m 38s.xml">
-      <configuration name="Doctest gather_odds" configurationId="tests" />
+    <history-entry file="Doctest_LinkedListIterator___next__ - 2019.02.28 at 10h 17m 39s.xml">
+      <configuration name="Doctest LinkedListIterator.__next__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_gather_odds - 2019.02.27 at 11h 41m 04s.xml">
-      <configuration name="Doctest gather_odds" configurationId="tests" />
+    <history-entry file="Doctest_RecursiveList___len__ - 2019.02.28 at 10h 21m 30s.xml">
+      <configuration name="Doctest RecursiveList.__len__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_gather_odds - 2019.02.27 at 11h 41m 33s.xml">
-      <configuration name="Doctest gather_odds" configurationId="tests" />
+    <history-entry file="Doctest_RecursiveList___len__ - 2019.02.28 at 10h 21m 52s.xml">
+      <configuration name="Doctest RecursiveList.__len__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_gather_odds_(1) - 2019.02.27 at 11h 42m 18s.xml">
-      <configuration name="Doctest gather_odds (1)" configurationId="tests" />
+    <history-entry file="Doctest_RecursiveList___len__ - 2019.02.28 at 10h 22m 25s.xml">
+      <configuration name="Doctest RecursiveList.__len__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_gather_odds_(1) - 2019.02.27 at 11h 42m 59s.xml">
-      <configuration name="Doctest gather_odds (1)" configurationId="tests" />
+    <history-entry file="Doctest_RecursiveList___len__ - 2019.02.28 at 10h 22m 48s.xml">
+      <configuration name="Doctest RecursiveList.__len__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_gather_odds_(1) - 2019.02.27 at 11h 43m 27s.xml">
-      <configuration name="Doctest gather_odds (1)" configurationId="tests" />
+    <history-entry file="Doctest_RecursiveList___len__ - 2019.02.28 at 10h 23m 55s.xml">
+      <configuration name="Doctest RecursiveList.__len__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_gather_odds_(1) - 2019.02.27 at 11h 44m 20s.xml">
-      <configuration name="Doctest gather_odds (1)" configurationId="tests" />
+    <history-entry file="Doctest_RecursiveList___len__ - 2019.02.28 at 10h 24m 03s.xml">
+      <configuration name="Doctest RecursiveList.__len__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_gather_odds - 2019.02.27 at 11h 45m 18s.xml">
-      <configuration name="Doctest gather_odds" configurationId="tests" />
+    <history-entry file="Doctest_RecursiveList___len__ - 2019.02.28 at 10h 25m 55s.xml">
+      <configuration name="Doctest RecursiveList.__len__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Doctest_convert_to_str - 2019.02.27 at 11h 48m 32s.xml">
-      <configuration name="Doctest convert_to_str" configurationId="tests" />
+    <history-entry file="Doctest_RecursiveList___len__ - 2019.02.28 at 10h 27m 07s.xml">
+      <configuration name="Doctest RecursiveList.__len__" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29577000" />
+    <option name="totallyTimeSpent" value="39810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="23" width="1391" height="877" extended-state="6" />
@@ -404,7 +438,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -414,7 +448,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3299363" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3299363" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.3299363" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -434,13 +468,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/labs/lab4/ff.py" />
-    <entry file="file://$PROJECT_DIR$/labs/lab5/time_lists.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/labs/lab6/nested.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1335">
@@ -448,50 +475,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab4/stack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-406" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab4/myqueue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab4/timequeue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1240">
-          <caret line="62" column="68" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lectures/week6/lecture_linked_list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="169" column="21" lean-forward="true" selection-start-line="169" selection-start-column="21" selection-end-line="169" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab5/linked_list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/docrunner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
+        <state relative-caret-position="781">
           <caret line="139" selection-start-line="139" selection-end-line="139" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/labs/lab6/recursive_list.py">
+    <entry file="file://$PROJECT_DIR$/labs/lab4/myqueue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="1155">
+          <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab4/2016.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -502,10 +503,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab5/2016.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab5/linked_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/midterm/inheri_oneanother.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lectures/week6/lecture_linked_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3450">
+          <caret line="230" column="25" lean-forward="true" selection-start-line="230" selection-start-column="25" selection-end-line="230" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/midterm/linked_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="199" column="46" selection-start-line="199" selection-start-column="46" selection-end-line="199" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/recursion practice/recursion_practice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="183" column="4" selection-start-line="183" selection-start-column="4" selection-end-line="183" selection-end-column="4" />
+        <state relative-caret-position="243">
+          <caret line="248" column="9" lean-forward="true" selection-start-line="248" selection-start-column="9" selection-end-line="248" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab5/time_lists.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="28" column="91" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab4/stack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-406" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab4/timequeue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab7/linked_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="213" column="34" lean-forward="true" selection-start-line="213" selection-start-column="34" selection-end-line="213" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labs/lab6/recursive_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="285" column="34" selection-start-line="285" selection-start-column="34" selection-end-line="285" selection-end-column="34" />
         </state>
       </provider>
     </entry>

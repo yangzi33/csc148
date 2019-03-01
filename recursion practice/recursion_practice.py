@@ -242,6 +242,24 @@ def all_permutation(s):
     pass
 
 
+def add_one(obj: Union[list, int]) -> None:
+    """
+    >>> l = [1, [2, 3], 4]
+    >>> add_one(l)
+    >>> l
+    [2, [3, 4], 5]
+    """
+
+    if isinstance(obj, int):
+        pass
+    else:
+        for i in range(len(obj)):
+            if isinstance(obj[i], int):
+                obj[i] += 1
+            else:
+                add_one(obj[i])
+
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()

@@ -80,10 +80,14 @@ class RecursiveList:
         """
         if self.is_empty():
             return 0
-
-
-
-
+        elif self._rest.is_empty():
+            return 1
+        else:
+            r = 0
+            while not self._rest.is_empty():
+                r += len(self._rest)
+                self._first = self._rest
+            return r
 
 
 
@@ -151,7 +155,6 @@ class RecursiveList:
             pass
         elif index == 0:
             pass
-        else:
 
 
     ###########################################################################
@@ -272,3 +275,13 @@ if __name__ == '__main__':
 
     # import python_ta
     # python_ta.check_all()
+
+'''
+def semi(obj): 
+    bc: obj is int
+    recursive: 
+    obj[o] is int -> obj[1:] is int
+    obj[o] is list -> obj[1:] is semi(obj)
+    for all sublist in list: 
+        check all sublist are semi
+'''

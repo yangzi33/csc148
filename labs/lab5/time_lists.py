@@ -22,7 +22,7 @@ def profile_len(list_class: type, size: int) -> float:
     Precondition: list_class is either list or LinkedList.
     """
     # TODO: Create an instance of list_class containing <size> 0's.
-    my_list = ...
+    my_list = size * [0]
 
     # TODO: call timeit appropriately to check the runtime of len on the list.
     # Look at the Lab 4 starter code if you don't remember how to use timeit:

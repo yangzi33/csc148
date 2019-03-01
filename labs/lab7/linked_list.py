@@ -1,4 +1,4 @@
-"""Lab 5: Linked List Exercises
+"""Lab 7: Recapping -- Linked Lists
 
 === CSC148 Winter 2019 ===
 Department of Computer Science,
@@ -8,10 +8,12 @@ University of Toronto
 This module contains the code for a linked list implementation with two classes,
 LinkedList and _Node.
 
-All of the code from lecture is here, as well as some exercises to work on.
+This is the same as the starter code from Lab 5, except that we've added some
+new guidelines for supporting for-loop iteration at the bottom of this file.
 """
 from __future__ import annotations
-from typing import Any, List, Optional
+
+from typing import Any, Optional
 
 
 class _Node:
@@ -44,10 +46,15 @@ class LinkedList:
     #     The first node in the linked list, or None if the list is empty.
     _first: Optional[_Node]
 
-    def __init__(self) -> None:
+    def __init__(self, items: list) -> None:
         """Initialize a new empty linked list containing the given items.
+
+        Note: this is the inefficient version of the initializer from the
+        lecture notes. Feel free to replace it with your own version from Lab 5!
         """
         self._first = None
+        for item in items:
+            self.append(item)
 
     # ------------------------------------------------------------------------
     # Methods from lecture/readings
@@ -55,10 +62,10 @@ class LinkedList:
     def is_empty(self) -> bool:
         """Return whether this linked list is empty.
 
-        # >>> LinkedList([]).is_empty()
-        # True
-        # >>> LinkedList([1, 2, 3]).is_empty()
-        # False
+        >>> LinkedList([]).is_empty()
+        True
+        >>> LinkedList([1, 2, 3]).is_empty()
+        False
         """
         return self._first is None
 
@@ -66,10 +73,10 @@ class LinkedList:
         """Return a string representation of this list in the form
         '[item1 -> item2 -> ... -> item-n]'.
 
-        # >>> str(LinkedList([1, 2, 3]))
-        # '[1 -> 2 -> 3]'
-        # >>> str(LinkedList([]))
-        # '[]'
+        >>> str(LinkedList([1, 2, 3]))
+        '[1 -> 2 -> 3]'
+        >>> str(LinkedList([]))
+        '[]'
         """
         items = []
         curr = self._first
@@ -96,6 +103,24 @@ class LinkedList:
             raise IndexError
         else:
             return curr.item
+
+    def append(self, item: Any) -> None:
+        """Append <item> to the end of this list.
+
+        >>> lst = LinkedList([1, 2, 3])
+        >>> str(lst)
+        '[1 -> 2 -> 3]'
+        >>> lst.append(4)
+        >>> str(lst)
+        '[1 -> 2 -> 3 -> 4]'
+        """
+        if self._first is None:
+            self._first = _Node(item)
+        else:
+            curr = self._first
+            while curr.next is not None:
+                curr = curr.next
+            curr.next = _Node(item)
 
     def insert(self, index: int, item: Any) -> None:
         """Insert a the given item at the given index in this list.
@@ -133,86 +158,70 @@ class LinkedList:
                 # Update links to insert new node
                 curr.next, new_node.next = new_node, curr.next
 
-    def reverse(self):
+    def __iter__(self) -> LinkedListIterator:
+        """Return an iterator for this linked list.
 
-        curr = self._first
-        while curr.next is not None:
-            last = curr
-            curr = curr.next
-        n = curr
-        # curr.next =
-
-
-
-    # ------------------------------------------------------------------------
-    # Lab Task 1
-    # ------------------------------------------------------------------------
-    # TODO: implement this method
-    def __len__(self) -> int:
-        """Return the number of elements in this list.
-
-        # >>> lst = LinkedList([])
-        # >>> len(lst)              # Equivalent to lst.__len__()
-        # 0
-        # >>> lst = LinkedList([1, 2, 3])
-        # >>> len(lst)
-        # 3
+        It should be straightforward to initialize the iterator here
+        (see the class documentation below). Just remember to initialize
+        it to the first node in this linked list.
         """
-        pass
+        return LinkedListIterator(self._first)
 
-    # TODO: implement this method
-    def count(self, item: Any) -> int:
-        """Return the number of times <item> occurs in this list.
 
-        Use == to compare items.
+class LinkedListIterator:
+    """An object responsible for iterating through a linked list.
 
-        # >>> lst = LinkedList([1, 2, 1, 3, 2, 1])
-        # >>> lst.count(1)
-        # 3
-        # >>> lst.count(2)
-        # 2
-        # >>> lst.count(3)
-        # 1
+    This enables linked lists to be used inside for loops!
+
+    >>> lst = LinkedList([1, 2, 3])
+    >>> for x in lst:
+    ...     print(x)
+    ...
+    1
+    2
+    3
+    """
+    # === Private attributes ===
+    # _curr:
+    #   The current node for this iterator.
+    #   This should start as the first node in a linked list,
+    #   and update to the "next" node every time __next__ is called.
+    _curr: Optional[_Node]
+
+    def __init__(self, first_node: Optional[_Node]) -> None:
+        """Initialize a new linked list iterator with the given node."""
+        self._curr = first_node
+
+    def __next__(self) -> Any:
+        """Return the next item in the iteration.
+
+        Raise StopIteration if there are no more items to return.
+
+        Hint: If you have an attribute keeping track of the where the iteration
+        is currently at in the list, it should be straight-forward to return
+        the current item, and update the attribute to be the next node in
+        the list.
+
+        >>> lst = LinkedList([1, 2, 3])
+        >>> iterator = lst.__iter__()
+        >>> iterator.__next__()
+        1
+        >>> iterator.__next__()
+        2
+        >>> iterator.__next__()
+        3
         """
-        pass
-
-    # TODO: implement this method
-    def index(self, item: Any) -> int:
-        """Return the index of the first occurrence of <item> in this list.
-
-        Raise ValueError if the <item> is not present.
-
-        Use == to compare items.
-
-        # >>> lst = LinkedList([1, 2, 1, 3, 2, 1])
-        # >>> lst.index(1)
-        # 0
-        # >>> lst.index(3)
-        # 3
-        # >>> lst.index(148)
-        # Traceback (most recent call last):
-        # ValueError
-        """
-
-
-    # TODO: implement this method
-    def __setitem__(self, index: int, item: Any) -> None:
-        """Store item at position <index> in this list.
-
-        Raise IndexError if index >= len(self).
-
-        # >>> lst = LinkedList([1, 2, 3])
-        # >>> lst[0] = 100  # Equivalent to lst.__setitem__(0, 100)
-        # >>> lst[1] = 200
-        # >>> lst[2] = 300
-        # >>> str(lst)
-        # '[100 -> 200 -> 300]'
-        """
-        pass
+        if self._curr is not None:
+            r = self._curr
+            self._curr = self._curr.next
+            return r.item
+        else:
+            raise StopIteration
 
 
 if __name__ == '__main__':
-    # import python_ta
-    # python_ta.check_all()
     import doctest
     doctest.testmod()
+
+    # import python_ta
+    # python_ta.check_all()
