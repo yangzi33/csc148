@@ -92,6 +92,9 @@ class Tree:
         >>> t3 = Tree(1, [Tree(-2, []), Tree(10, []), Tree(-30, [])])
         >>> t3.num_positives()
         2
+        >>> t4 = Tree(-1000000000, [t1, t2, t3])
+        >>> t4.num_positives()
+        3
         """
         if self.is_empty():
             return 0
@@ -143,6 +146,10 @@ class Tree:
         >>> t2 = Tree(1, [Tree(-2, []), Tree(10, []), Tree(-30, [])])
         >>> t2.height()
         2
+        >>> t3 = Tree(1, [Tree(1, [t1, t2, t1, t2]), Tree(4, [t1])])
+        >>> t = Tree(123, [t1, t2, t3])
+        >>> t.height()
+        4
         """
         if self.is_empty():
             return 0
@@ -151,7 +158,7 @@ class Tree:
         else:
             r = 1
             for subtree in self._subtrees:
-                if subtree.height() >= r:
+                if subtree.height() > r:
                     r += subtree.height()
 
             return r
@@ -165,17 +172,17 @@ class Tree:
         >>> t.__contains__(148)
         False
         """
-        if self.is_empty():
-            return False
-        elif self._subtrees == []:
-            return item == self._root
-        else:
-            for subtree in self._subtrees:
-                if not subtree.__contains__(item):
-                    subtree = subtree._root
-                else:
-                    return True
-            return False
+        # if self.is_empty():
+        #     return False
+        # elif self._subtrees == []:
+        #     return item == self._root
+        # else:
+        #     for subtree in self._subtrees:
+        #         if not subtree.__contains__(item):
+        #             subtree = subtree._root
+        #         else:
+        #             return True
+        #     return False
 
 
 if __name__ == '__main__':
