@@ -43,7 +43,6 @@ def nested_list_equal(obj1: Union[int, List], obj2: Union[int, List]) -> bool:
     """
     # HINT: You'll need to modify the basic pattern to loop over indexes,
     # so that you can iterate through both obj1 and obj2 in parallel.
-
     if isinstance(obj1, int) or isinstance(obj2, int):
         return obj1 == obj2
     else:
