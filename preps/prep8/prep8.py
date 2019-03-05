@@ -176,16 +176,15 @@ class Tree:
         """
         if self.is_empty():
             return False
+        elif self._root == item:
+            return True
         elif self._subtrees == []:
-            return item == self._root
+            return self._root == item
         else:
             for subtree in self._subtrees:
-                if not subtree.__contains__(item):
-                    subtree = subtree._root
-                else:
+                if subtree.__contains__(item):
                     return True
             return False
-
 
 if __name__ == '__main__':
     import doctest
