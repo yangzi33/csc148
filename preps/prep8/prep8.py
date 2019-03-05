@@ -103,7 +103,10 @@ class Tree:
                 return 1
             return 0
         else:
-            r = 0
+            if self._root > 0: 
+                r = 1
+            else: 
+                r = 0
             for subtree in self._subtrees:
                 r += subtree.num_positives()
 
