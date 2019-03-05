@@ -103,7 +103,7 @@ class Tree:
                 return 1
             return 0
         else:
-            r = 1
+            r = 0
             for subtree in self._subtrees:
                 r += subtree.num_positives()
 
@@ -158,9 +158,9 @@ class Tree:
         else:
             r = []
             for subtree in self._subtrees:
-                r += [subtree.height() + 1]
+                r += [subtree.height()]
 
-            return max(r)
+            return max(r) + 1
 
     def __contains__(self, item: Any) -> bool:
         """Return whether this tree contains <item>.
