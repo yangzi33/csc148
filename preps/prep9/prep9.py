@@ -179,19 +179,14 @@ class BinarySearchTree:
         """
         if self.is_empty():
             return 0
-        elif self._root > item:
+        elif item < self._root:
             return self._left.count(item)
-        elif self._root < item:
+        elif item > self._root:
             return self._right.count(item)
         elif self._root == item:
-            count = 1
-            if self._right == item:
-                count += self._right.count(item)
-            if self._left == item:
-                count += self._left.count(item)
-            return count
+            return 1 + self._right.count(item) + \
+                     self._left.count(item)
 
-    # TODO: implement this method!
     def items(self) -> List:
         """Return all of the items in the BST in sorted order.
 
@@ -213,7 +208,14 @@ class BinarySearchTree:
         >>> bst.items()
         [2, 3, 5, 7, 9, 11, 13]
         """
-        pass
+        if self.is_empty():
+            return []
+        else:
+            r = []
+            r.extend(self._left.items())
+            r.extend([self._root])
+            r.extend(self._right.items())
+            return r
 
     def smaller(self, item: Any) -> List:
         """Return all of the items in this BST strictly smaller than <item>
