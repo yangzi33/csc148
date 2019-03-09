@@ -183,7 +183,7 @@ class BinarySearchTree:
             return self._left.count(item)
         elif item > self._root:
             return self._right.count(item)
-        elif self._root == item:
+        else:
             return 1 + self._right.count(item) + \
                      self._left.count(item)
 
@@ -241,7 +241,17 @@ class BinarySearchTree:
         >>> bst.smaller(13)
         [2, 3, 5, 7, 9, 11]
         """
-        pass
+        if self.is_empty():
+            return []
+
+        if item <= self._root:
+            return self._left.smaller(item)
+        else:
+            r = []
+            r.extend(self._left.smaller(item))
+            r.extend([self._root])
+            r.extend(self._right.smaller(item))
+            return r
 
 
 if __name__ == '__main__':
