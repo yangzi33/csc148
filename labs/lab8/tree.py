@@ -355,7 +355,7 @@ class Tree:
         elif self._subtrees == []:
             self._subtrees += [Tree(item, [])]
         else:
-
+            # pass
 
 
 
