@@ -183,7 +183,7 @@ class BinarySearchTree:
             return self._left.count(item)
         elif item > self._root:
             return self._right.count(item)
-        else:
+        else:  # item == self._root:
             return 1 + self._right.count(item) + \
                      self._left.count(item)
 
