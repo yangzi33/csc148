@@ -263,14 +263,14 @@ class BinarySearchTree:
         """
         if self.is_empty():
             self._root = item
-
+            self._right = BinarySearchTree(None)
+            self._left = BinarySearchTree(None)
         elif item > self._root:
             self._right.insert(item)
         elif item < self._root:
             self._left.insert(item)
         else:  # elif item == self._root:
             self._left._right.insert(item)
-        # TODO: item == self._root
 
     # ------------------------------------------------------------------------
     # Task 4

@@ -31,7 +31,6 @@ def insert_delete_all(n: int, sorted_: bool) -> None:
     Note: you'll need to first create your own BinarySearchTree here,
     and then call insert and delete on it.
     """
-    pass
 
 
 # This is the main timing experiment. You don't need to change any of the code
