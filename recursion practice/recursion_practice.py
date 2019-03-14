@@ -181,6 +181,11 @@ def convert_to_str(obj) -> None:
     >>> list_ == ['1', '2', ['3', '4']]
     True
     """
+    for i in range(len(obj)):
+        if isinstance(obj[i], int):
+            obj[i] = str(obj[i])
+        else:
+            convert_to_str(obj[i])
 
 
 def get_depth_d(obj, d: int) -> list:
@@ -188,7 +193,18 @@ def get_depth_d(obj, d: int) -> list:
     >>> get_depth_d([1, [2, 3, [4, 5]]], 3)
     [4, 5]
     """
-    pass
+    # TODO
+    # if isinstance(obj, int):
+    #     return [obj]
+    # else:
+    #     r = []
+    #     d -= 1
+    #     for sublist in obj:
+    #         if d == 1:
+    #             r.extend(get_depth_d(sublist, d))
+    #
+    #     return r
+
 
 def count_above_depth(obj, d) -> int:
     """Return the number of obj above the depth d.
@@ -239,7 +255,7 @@ def all_permutation(s):
     >>> all_permutation('123')
     ['123', '132', '213', '231', '312', '321']
     """
-    pass
+
 
 
 def add_one(obj: Union[list, int]) -> None:
