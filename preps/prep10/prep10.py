@@ -148,7 +148,6 @@ class Bool(Expr):
         """Initialize a new boolean constant."""
         self.b = b
 
-    # TODO: implement this method!
     def evaluate(self) -> Any:
         """Return the *value* of this expression.
 
@@ -159,7 +158,7 @@ class Bool(Expr):
         >>> expr.evaluate()
         True
         """
-        pass
+        return self.b
 
     def __str__(self) -> str:
         """Return a string representation of this expression.
@@ -218,7 +217,16 @@ class BoolOp(Expr):
         >>> expr.evaluate()
         False
         """
-        pass
+        if self.op == 'and':
+            for values in self.values:
+                if not values.evaluate():
+                    return False
+            return True
+        else:
+            for values in self.values:
+                if values.evaluate():
+                    return True
+            return False
 
     def __str__(self) -> str:
         """Return a string representation of this boolean expression.
@@ -262,7 +270,6 @@ class Compare(Expr):
         self.left = left
         self.comparisons = comparisons
 
-    # TODO: implement this method!
     def evaluate(self) -> Any:
         """Return the *value* of this expression.
 
@@ -280,7 +287,14 @@ class Compare(Expr):
         >>> expr.evaluate()
         True
         """
-        pass
+        for comp in self.comparisons:
+            if comp[0] == '<=':
+                if comp[1].evaluate() <= self.left.evaluate():
+                    return False
+            elif comp[0] == '<':
+                if comp[1].evaluate() < self.left.evaluate():
+                    return False
+        return True
 
     def __str__(self) -> str:
         """Return a string representation of this comparison expression.
