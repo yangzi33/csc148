@@ -202,7 +202,6 @@ class BoolOp(Expr):
         self.op = op
         self.values = values
 
-    # TODO: implement this method!
     def evaluate(self) -> Any:
         """Return the *value* of this expression.
 
