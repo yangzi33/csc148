@@ -108,7 +108,23 @@ class TMTree:
         else:
             self._expanded = False
 
-        # TODO: (Task 1) Complete this initializer by doing two things:
+        self._colour = (randint(0, 255), randint(0, 255), randint(0, 255))
+        while True:  # Permutation in colour
+            if self._colour[0] != self._colour[1] != self._colour[2]:
+                break
+            self._colour = (randint(0, 255), randint(0, 255), randint(0, 255))
+
+        if self.is_empty() or not self._subtrees:
+            self.data_size = data_size
+        else:
+            s = 0
+            for subtree in self._subtrees:
+                s += subtree.data_size
+                subtree._parent_tree = self
+            self.data_size = s
+
+
+        # TODO: (Task 1)
         # 1. Initialize self._colour and self.data_size, according to the
         # docstring.
         # 2. Set this tree as the parent for each of its subtrees.
@@ -225,12 +241,26 @@ class FileSystemTree(TMTree):
         """Store the file tree structure contained in the given file or folder.
 
         Precondition: <path> is a valid path for this computer.
+
+        Sample 'path':
+        '/Users/Diane/csc148/assignments' =>
+        ['Users', 'Diane', 'csc148', 'assignments']
+
+
         """
         # Remember that you should recursively go through the file system
         # and create new FileSystemTree objects for each file and folder
         # encountered.
         #
         # Also remember to make good use of the superclass constructor!
+        # s = path.split('/')[1:]
+        TMTree.__init__(self, name=path.split('/')[-1], subtrees=[],
+                        data_size=os.path.getsize(path))
+
+
+
+
+
         # TODO: (Task 1) Implement the initializer
 
     def get_separator(self) -> str:
