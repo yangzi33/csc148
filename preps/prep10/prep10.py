@@ -219,13 +219,13 @@ class BoolOp(Expr):
         if self.op == 'and':
             for values in self.values:
                 if not values.evaluate():
-                    return False
-            return True
+                    return values.evaluate()
+            return self.values[-1].evaluate()
         else:
             for values in self.values:
                 if values.evaluate():
-                    return True
-            return False
+                    return values.evaluate()
+            return self.values[-1].evaluate()
 
     def __str__(self) -> str:
         """Return a string representation of this boolean expression.
@@ -286,13 +286,17 @@ class Compare(Expr):
         >>> expr.evaluate()
         True
         """
+        to_compare = self.left.evaluate()
+
         for comp in self.comparisons:
             if comp[0] == '<=':
-                if comp[1].evaluate() <= self.left.evaluate():
+                if not to_compare <= comp[1].evaluate():
                     return False
-            elif comp[0] == '<':
-                if comp[1].evaluate() < self.left.evaluate():
+            if comp[0] == '<':
+                if not to_compare < comp[1].evaluate():
                     return False
+            to_compare = comp[1].evaluate()
+
         return True
 
     def __str__(self) -> str:
