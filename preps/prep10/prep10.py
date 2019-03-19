@@ -221,11 +221,13 @@ class BoolOp(Expr):
                 if not values.evaluate():
                     return values.evaluate()
             return self.values[-1].evaluate()
-        else:
+        elif self.op == 'or':
             for values in self.values:
                 if values.evaluate():
                     return values.evaluate()
             return self.values[-1].evaluate()
+        else:
+            raise ValueError(f'Invalid operator {self.op}')
 
     def __str__(self) -> str:
         """Return a string representation of this boolean expression.
@@ -292,9 +294,11 @@ class Compare(Expr):
             if comp[0] == '<=':
                 if not to_compare <= comp[1].evaluate():
                     return False
-            if comp[0] == '<':
+            elif comp[0] == '<':
                 if not to_compare < comp[1].evaluate():
                     return False
+            else:
+                raise ValueError(f'Invalid operator {comp[0]}')
             to_compare = comp[1].evaluate()
 
         return True
