@@ -299,6 +299,7 @@ class Compare(Expr):
                     return False
             else:
                 raise ValueError(f'Invalid operator {comp[0]}')
+
             to_compare = comp[1].evaluate()
 
         return True
