@@ -121,17 +121,19 @@ def mergesort3(lst: List) -> List:
 
     HINT: depending on your impementation, you might need another base case
     when len(lst) == 2 to avoid an infinite recursion error.
-
     >>> mergesort3([10, 2, 5, -6, 17, 10])
     [-6, 2, 5, 10, 10, 17]
     """
     if len(lst) < 2:
         return lst[:]
+    elif len(lst) == 2:
+        return [min(lst), max(lst)]
     else:
         div = len(lst) // 3
+        div2 = 2 * div
         left_sort = mergesort3(lst[:div])
-        mid_sort = mergesort3(lst[div:2*div])
-        right_sort = mergesort3(lst[2*div:])
+        mid_sort = mergesort3(lst[div:div2])
+        right_sort = mergesort3(lst[div2:])
 
     return merge3(left_sort, mid_sort, right_sort)
 
@@ -156,7 +158,60 @@ def merge3(lst1: List, lst2: List, lst3: List) -> List:
     i3 = 0
     merged = []
 
-    # while i1 < len(lst1) and i2 < len(lst2)
+    while i1 < len(lst1) and i2 < len(lst2) and i3 < len(lst3):
+        if lst1[i1] <= lst2[i2] and lst1[i1] <= lst3[i3]:
+            merged.append(lst1[i1])
+            i1 += 1
+        elif lst2[i2] <= lst1[i1] and lst2[i2] <= lst3[i3]:
+            merged.append(lst2[i2])
+            i2 += 1
+        else:
+            merged.append(lst3[i3])
+            i3 += 1
+
+    assert len(lst1) == i1 or len(lst2) == i2 or len(lst3) == i3
+
+    left = lst1[i1:]
+    mid = lst2[i2:]
+    right = lst3[i3:]
+    return f(left, mid, right, merged)
+
+
+def f(l1: List, l2: List, l3: List, merged: List) -> List:
+    if not l1:
+        i2 = 0
+        i3 = 0
+        while i2 < len(l2) and i3 < len(l3):
+            if l2[i2] <= l3[i3]:
+                merged.append(l2[i2])
+                i2 += 1
+            else:
+                merged.append(l3[i3])
+                i3 += 1
+        return merged + l2[i2:] + l3[i3:]
+    elif not l2:
+        i1 = 0
+        i3 = 0
+        while i1 < len(l1) and i3 < len(l3):
+            if l1[i1] <= l3[i3]:
+                merged.append(l1[i1])
+                i1 += 1
+            else:
+                merged.append(l3[i3])
+                i3 += 1
+        return merged + l1[i1:] + l3[i3:]
+    else:
+        i1 = 0
+        i2 = 0
+        while i1 < len(l1) and i2 < len(l2):
+            if l1[i1] <= l2[i2]:
+                merged.append(l1[i1])
+                i1 += 1
+            else:
+                merged.append(l2[i2])
+                i2 += 1
+        return merged + l1[i1:] + l2[i2:]
+
 
 # TODO: Implement this function
 def kth_smallest(lst: List, k: int) -> Any:
@@ -186,10 +241,13 @@ def kth_smallest(lst: List, k: int) -> Any:
 
     smaller, bigger = _partition(lst, pivot)
 
-    if len(smaller) > k:
-        return smaller[k]
+    if k == len(smaller):
+        return lst[k]
     else:
-        return bigger[k - len(smaller)]
+        if len(smaller) > k:
+            return kth_smallest(smaller, k - len(bigger))
+        else:
+            return kth_smallest(bigger, k - len(smaller))
 
 
 if __name__ == '__main__':
