@@ -41,6 +41,7 @@ def _merge(lst1: List, lst2: List) -> List:
 
     Precondition: <lst1> and <lst2> are sorted.
     >>> _merge([4, 5, 6], [1, 2, 3])
+    [1, 2, 3, 4, 5, 6]
     """
     index1 = 0
     index2 = 0
@@ -174,43 +175,45 @@ def merge3(lst1: List, lst2: List, lst3: List) -> List:
     left = lst1[i1:]
     mid = lst2[i2:]
     right = lst3[i3:]
-    return f(left, mid, right, merged)
+    return merged + merge_helper(left, mid, right)
 
 
-def f(l1: List, l2: List, l3: List, merged: List) -> List:
+def merge_helper(l1: List, l2: List, l3: List) -> List:
+    """A helper function of function merge3. Returns a sorted list of three
+    sorted lists
+
+    Precondition: l1, l2, l3 must be sorted.
+    """
+    merged = []
+    i = 0
+    j = 0
     if not l1:
-        i2 = 0
-        i3 = 0
-        while i2 < len(l2) and i3 < len(l3):
-            if l2[i2] <= l3[i3]:
-                merged.append(l2[i2])
-                i2 += 1
+        while i < len(l2) and j < len(l3):
+            if l2[i] <= l3[j]:
+                merged.append(l2[i])
+                i += 1
             else:
-                merged.append(l3[i3])
-                i3 += 1
-        return merged + l2[i2:] + l3[i3:]
+                merged.append(l3[j])
+                j += 1
+        return merged + l2[i:] + l3[j:]
     elif not l2:
-        i1 = 0
-        i3 = 0
-        while i1 < len(l1) and i3 < len(l3):
-            if l1[i1] <= l3[i3]:
-                merged.append(l1[i1])
-                i1 += 1
+        while i < len(l1) and j < len(l3):
+            if l1[i] <= l3[j]:
+                merged.append(l1[i])
+                i += 1
             else:
-                merged.append(l3[i3])
-                i3 += 1
-        return merged + l1[i1:] + l3[i3:]
+                merged.append(l3[j])
+                j += 1
+        return merged + l1[i:] + l3[j:]
     else:
-        i1 = 0
-        i2 = 0
-        while i1 < len(l1) and i2 < len(l2):
-            if l1[i1] <= l2[i2]:
-                merged.append(l1[i1])
-                i1 += 1
+        while i < len(l1) and j < len(l2):
+            if l1[i] <= l2[j]:
+                merged.append(l1[i])
+                i += 1
             else:
-                merged.append(l2[i2])
-                i2 += 1
-        return merged + l1[i1:] + l2[i2:]
+                merged.append(l2[j])
+                j += 1
+        return merged + l1[i:] + l2[j:]
 
 
 # TODO: Implement this function
@@ -237,15 +240,14 @@ def kth_smallest(lst: List, k: int) -> Any:
     if k < 0 or k >= len(lst):
         raise IndexError
 
-    pivot = k
-
-    smaller, bigger = _partition(lst, pivot)
-
-    if k == len(smaller):
-        return lst[k]
+    if len(lst) - 1 == k:
+        return max(lst)
     else:
+        pivot = sum(lst) // len(lst)
+        smaller, bigger = _partition(lst, pivot)
+
         if len(smaller) > k:
-            return kth_smallest(smaller, k - len(bigger))
+            return kth_smallest(smaller, k)
         else:
             return kth_smallest(bigger, k - len(smaller))
 
