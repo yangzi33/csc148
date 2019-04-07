@@ -101,12 +101,20 @@ class TMTree:
         self._name = name
         self._subtrees = subtrees[:]
         self._parent_tree = None
-
+        self._colour = (randint(0, 255), randint(0, 255), randint(0, 255))
         # You will change this in Task 5
+        # self.data_size = size
+        self.data_size = data_size
         if len(self._subtrees) > 0:
             self._expanded = True
+            size = 0
+            for tree in self._subtrees:
+                tree._parent_tree = self
+                size += tree.data_size
         else:
             self._expanded = False
+        for tree in subtrees:
+            tree._parent_tree = self
 
         # TODO: (Task 1) Complete this initializer by doing two things:
         # 1. Initialize self._colour and self.data_size, according to the
@@ -129,6 +137,21 @@ class TMTree:
         # Programming tip: use "tuple unpacking assignment" to easily extract
         # elements of a rectangle, as follows.
         # x, y, width, height = rect
+        if self.is_empty():
+            pass
+        if self._expanded:
+            self.rect = rect
+        else:
+            self.rect = rect
+            for tree in self._subtrees:
+                if rect[2] > rect[3]:
+                    width = tree.data_size // self.data_size * rect[2]
+                    x = rect[0] + rect[2]
+                    tree.update_rectangles((x, rect[1], width, rect[3]))
+                else:
+                    length = tree.data_size // self.data_size * rect[3]
+                    y = rect[0] + rect[3]
+                    tree.update_rectangles((rect[0], y, rect[2], length))
 
     def get_rectangles(self) -> List[Tuple[Tuple[int, int, int, int],
                                            Tuple[int, int, int]]]:
@@ -138,6 +161,15 @@ class TMTree:
         to fill it with.
         """
         # TODO: (Task 2) Complete the body of this method.
+        if self.is_empty():
+            return []
+        if self._expanded is False:
+            return [(self.rect, self._colour)]
+        else:
+            result = [(self.rect, self._colour)]
+            for tree in self._subtrees:
+                result += [tree.get_rectangles()]
+            return result
 
     def get_tree_at_position(self, pos: Tuple[int, int]) -> Optional[TMTree]:
         """Return the leaf in the displayed-tree rooted at this tree whose
@@ -148,6 +180,12 @@ class TMTree:
         tree represented by the rectangle that is closer to the origin.
         """
         # TODO: (Task 3) Complete the body of this method
+        if self.is_empty():
+            pass
+        if self._expanded and self._parent_tree is not None:
+            return
+
+
 
     def update_data_sizes(self) -> int:
         """Update the data_size for this tree and its subtrees, based on the
@@ -156,12 +194,23 @@ class TMTree:
         If this tree is a leaf, return its size unchanged.
         """
         # TODO: (Task 4) Complete the body of this method.
+        if self._expanded is False:
+            return self.data_size
+        else:
+            self.data_size = 0
+            for tree in self._subtrees:
+                self.data_size += tree.update_data_sizes()
+            return self.data_size
 
     def move(self, destination: TMTree) -> None:
         """If this tree is a leaf, and <destination> is not a leaf, move this
         tree to be the last subtree of <destination>. Otherwise, do nothing.
         """
         # TODO: (Task 4) Complete the body of this method.
+        if self._expanded is False and destination._expanded is True:
+            destination._subtrees.append(self)
+        else:
+            pass
 
     def change_size(self, factor: float) -> None:
         """Change the value of this tree's data_size attribute by <factor>.
@@ -172,10 +221,14 @@ class TMTree:
         Do nothing if this tree is not a leaf.
         """
         # TODO: (Task 4) Complete the body of this method
-
+        if self._expanded is False:
+            self.data_size += round(self.data_size * factor)
+        else:
+            pass
     # TODO: (Task 5) Write the methods expand, expand_all, collapse, and
     # TODO: collapse_all, and add the displayed-tree functionality to the
     # TODO: methods from Tasks 2 and 3
+
 
     # Methods for the string representation
     def get_path_string(self, final_node: bool = True) -> str:
@@ -232,6 +285,22 @@ class FileSystemTree(TMTree):
         #
         # Also remember to make good use of the superclass constructor!
         # TODO: (Task 1) Implement the initializer
+        if os.path.isdir(path):
+            p = os.listdir(path)
+            name = os.path.basename(path)
+            data_size = os.path.getsize(path)
+            if len(p) == 0:
+                TMTree.__init__(self, name, [], data_size)
+            else:
+                lst = []
+                for filename in p:
+                    subpath = os.path.join(path, filename)
+                    lst.append(FileSystemTree(subpath))
+                TMTree.__init__(self, name, lst, data_size)
+        else:
+            name = os.path.basename(path)
+            data_size = os.path.getsize(path)
+            TMTree.__init__(self, name, [], data_size)
 
     def get_separator(self) -> str:
         """Return the file separator for this OS.
