@@ -127,9 +127,7 @@ def mergesort3(lst: List) -> List:
     if len(lst) < 2:
         return lst[:]
     elif len(lst) == 2:
-        if lst[0] > lst[1]:
-            return lst[::-1]
-        return lst[:]
+        return [min(lst), max(lst)]
     else:
         div = len(lst) // 3
         div2 = 2 * div
@@ -175,45 +173,21 @@ def merge3(lst1: List, lst2: List, lst3: List) -> List:
     left = lst1[i1:]
     mid = lst2[i2:]
     right = lst3[i3:]
-    return merged + merge_helper(left, mid, right)
+    return merge_helper(left, mid, right, merged)
 
 
-def merge_helper(l1: List, l2: List, l3: List) -> List:
+def merge_helper(l1: List, l2: List, l3: List, merged: List) -> List:
     """A helper function of function merge3. Returns a sorted list of three
     sorted lists
 
     Precondition: l1, l2, l3 must be sorted.
     """
-    merged = []
-    i = 0
-    j = 0
     if not l1:
-        while i < len(l2) and j < len(l3):
-            if l2[i] <= l3[j]:
-                merged.append(l2[i])
-                i += 1
-            else:
-                merged.append(l3[j])
-                j += 1
-        return merged + l2[i:] + l3[j:]
+        return merged + _merge(l2, l3)
     elif not l2:
-        while i < len(l1) and j < len(l3):
-            if l1[i] <= l3[j]:
-                merged.append(l1[i])
-                i += 1
-            else:
-                merged.append(l3[j])
-                j += 1
-        return merged + l1[i:] + l3[j:]
+        return merged + _merge(l1, l3)
     else:
-        while i < len(l1) and j < len(l2):
-            if l1[i] <= l2[j]:
-                merged.append(l1[i])
-                i += 1
-            else:
-                merged.append(l2[j])
-                j += 1
-        return merged + l1[i:] + l2[j:]
+        return merged + _merge(l1, l2)
 
 
 def kth_smallest(lst: List, k: int) -> Any:
@@ -241,14 +215,13 @@ def kth_smallest(lst: List, k: int) -> Any:
 
     if len(lst) - 1 == k:
         return max(lst)
-    else:
-        pivot = sum(lst) // len(lst)
-        smaller, bigger = _partition(lst, pivot)
 
-        if len(smaller) > k:
-            return kth_smallest(smaller, k)
-        else:
-            return kth_smallest(bigger, k - len(smaller))
+    smaller, bigger = _partition(lst, sum(lst) // len(lst))
+
+    if len(smaller) > k:
+        return kth_smallest(smaller, k)
+    else:
+        return kth_smallest(bigger, k - len(smaller))
 
 
 if __name__ == '__main__':
