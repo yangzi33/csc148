@@ -71,32 +71,14 @@ class RecursiveList:
     def __len__(self) -> int:
         """Return the number of elements in this list.
 
-        # >>> lst = RecursiveList([])
-        # >>> len(lst) # Equivalent to lst.__len__()
-        # 0
+        >>> lst = RecursiveList([])
+        >>> len(lst) # Equivalent to lst.__len__()
+        0
         >>> lst = RecursiveList([1, 2, 3])
         >>> len(lst)
         3
         """
-        if self.is_empty():
-            return 0
-        elif self._rest.is_empty():
-            return 1
-        else:
-            r = 0
-            while not self._rest.is_empty():
-                r += len(self._rest)
-                self._first = self._rest
-            return r
-
-
-
-        # r = 0
-        # while not self.is_empty():
-        #     r += 1
-        #     self._first = self._rest
-        # return r
-
+        pass
 
     def __contains__(self, item: Any) -> bool:
         """Return whether <item> is in this list.
@@ -151,11 +133,7 @@ class RecursiveList:
         ...
         IndexError
         """
-        if self.is_empty():
-            pass
-        elif index == 0:
-            pass
-
+        pass
 
     ###########################################################################
     # Mutating methods: these methods modify the the list
@@ -275,13 +253,3 @@ if __name__ == '__main__':
 
     # import python_ta
     # python_ta.check_all()
-
-'''
-def semi(obj): 
-    bc: obj is int
-    recursive: 
-    obj[o] is int -> obj[1:] is int
-    obj[o] is list -> obj[1:] is semi(obj)
-    for all sublist in list: 
-        check all sublist are semi
-'''

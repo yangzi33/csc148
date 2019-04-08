@@ -78,13 +78,6 @@ def find_runs(lst: list) -> List[Tuple[int, int]]:
     run_start = 0
     run_end = 1
     while run_end < len(lst):
-
-
-
-
-
-
-
         # How can you tell if a run should continue?
         #   (When you do, update run_end.)
 

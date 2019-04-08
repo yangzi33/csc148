@@ -245,7 +245,7 @@ class Tree:
     # ------------------------------------------------------------------------
     # Lab Task 1: Non-mutating tree methods
     # ------------------------------------------------------------------------
-
+    # TODO: implement this method!
     def branching_factor(self) -> float:
         """Return the average branching factor of this tree's internal values.
 
@@ -263,17 +263,9 @@ class Tree:
         >>> t.branching_factor()
         3.0
         """
-        if self.is_empty() or self._subtrees == []:
-            return 0.0
-        else:
-            total = 1
-            num = len(self._subtrees)
-            for subtree in self._subtrees:
-                if subtree._subtrees:
-                    total += 1
-                    num += len(subtree._subtrees)
-            return num / total
+        pass
 
+    # TODO: implement this method!
     def items_at_depth(self, d: int) -> List:
         """Return a list of the values in this tree at the given depth.
 
@@ -288,37 +280,8 @@ class Tree:
         >>> t2 = Tree(5, [])
         >>> t2.items_at_depth(1)
         [5]
-        >>> t3 = Tree(3, [Tree(1, [Tree(2, [Tree(1, [])])])])
-        >>> t4 = Tree(1, [Tree(1, [t1, t2]), Tree(2, [t3])])
-        >>> t4.items_at_depth(6)
-        [1]
         """
-        if self.is_empty():
-            return []
-
-
-
-
-
-
-
-
-
-
-        # if d == 1:
-        #     return self._root
-        # else:
-        #     d -= 1
-        #     r = []
-        #     for subtree in self._subtrees:
-        #         du = d
-        #         while du is not None:
-        #             du -= 1
-        #             subtree.items_at_depth(du)
-        #         r +=
-        #     return r
-
-
+        pass
 
     # ------------------------------------------------------------------------
     # Lab Task 2: Tree insertion
@@ -350,14 +313,7 @@ class Tree:
         >>> 100 in t
         True
         """
-        if self.is_empty():
-            self._root = item
-        elif self._subtrees == []:
-            self._subtrees += [Tree(item, [])]
-        else:
-            # pass
-
-
+        pass
 
 
 if __name__ == '__main__':

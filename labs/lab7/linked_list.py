@@ -158,6 +158,7 @@ class LinkedList:
                 # Update links to insert new node
                 curr.next, new_node.next = new_node, curr.next
 
+    # TODO: Implement this method!
     def __iter__(self) -> LinkedListIterator:
         """Return an iterator for this linked list.
 
@@ -165,9 +166,10 @@ class LinkedList:
         (see the class documentation below). Just remember to initialize
         it to the first node in this linked list.
         """
-        return LinkedListIterator(self._first)
+        pass
 
 
+# TODO: Implement this class!
 class LinkedListIterator:
     """An object responsible for iterating through a linked list.
 
@@ -190,7 +192,7 @@ class LinkedListIterator:
 
     def __init__(self, first_node: Optional[_Node]) -> None:
         """Initialize a new linked list iterator with the given node."""
-        self._curr = first_node
+        pass
 
     def __next__(self) -> Any:
         """Return the next item in the iteration.
@@ -211,12 +213,7 @@ class LinkedListIterator:
         >>> iterator.__next__()
         3
         """
-        if self._curr is not None:
-            r = self._curr
-            self._curr = self._curr.next
-            return r.item
-        else:
-            raise StopIteration
+        pass
 
 
 if __name__ == '__main__':

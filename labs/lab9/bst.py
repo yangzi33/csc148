@@ -188,17 +188,7 @@ class BinarySearchTree:
         >>> bst.height()
         2
         """
-        if self.is_empty():
-            return 0
-
-        if self._right.is_empty() and self._left.is_empty():
-            return 1
-        elif self._left.is_empty():
-            return self._right.height() + 1
-        elif self._right.is_empty():
-            return self._left.height() + 1
-        else:
-            return 1 + max([self._left.height(), self._right.height()])
+        pass
 
     # TODO: implement this method!
     def items_in_range(self, start: Any, end: Any) -> List:
@@ -225,22 +215,7 @@ class BinarySearchTree:
         >>> bst.items_in_range(10, 13)
         [11, 13]
         """
-        if self.is_empty():
-            return []
-
-        r = range(start, end + 1)
-
-        if self._root < start:
-            return self._right.items_in_range(start, end)
-        elif self._root > end:
-            return self._left.items_in_range(start, end)
-        else:
-            result = []
-            result.extend(self._left.items_in_range(start, end))
-            result.extend([self._root])
-            result.extend(self._right.items_in_range(start, end))
-
-            return result
+        pass
 
     # ------------------------------------------------------------------------
     # Task 2
@@ -261,16 +236,7 @@ class BinarySearchTree:
         >>> bst._right._root
         20
         """
-        if self.is_empty():
-            self._root = item
-            self._right = BinarySearchTree(None)
-            self._left = BinarySearchTree(None)
-        elif item > self._root:
-            self._right.insert(item)
-        elif item < self._root:
-            self._left.insert(item)
-        else:  # elif item == self._root:
-            self._left._right.insert(item)
+        pass
 
     # ------------------------------------------------------------------------
     # Task 4
@@ -310,7 +276,7 @@ class BinarySearchTree:
         <BLANKLINE>
         """
         # TODO: implement this method
-
+        pass
 
     def rotate_left(self) -> None:
         """Rotate the BST counter-clockwise,
@@ -357,26 +323,6 @@ class BinarySearchTree:
         """
         # TODO: implement this method!
         pass
-
-    def closest(self, item: int) -> Optional[int]:
-        if self.is_empty():
-            return None
-        elif item == self._root:
-            return self._root
-        elif item < self._root:
-            left_closest = self._left.closest(item)
-            if left_closest is not None and \
-                    (item - left_closest) <= self._root - item:
-                return left_closest
-            else:
-                return self._root
-        else:
-            right_closest = self._right.closest(item)
-            if right_closest is not None and \
-                    (right_closest - item) < item - self._root:
-                return right_closest
-            else:
-                return self._root
 
 
 if __name__ == '__main__':
