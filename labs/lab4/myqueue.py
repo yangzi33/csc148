@@ -28,7 +28,6 @@ class Queue:
 
     def __init__(self) -> None:
         """Initialize a new empty queue."""
-        pass
         self._item = []
 
     def is_empty(self) -> bool:
