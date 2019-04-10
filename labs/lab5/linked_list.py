@@ -136,20 +136,28 @@ class LinkedList:
     # ------------------------------------------------------------------------
     # Lab Task 1
     # ------------------------------------------------------------------------
-    # TODO: implement this method
     def __len__(self) -> int:
         """Return the number of elements in this list.
 
-        # >>> lst = LinkedList([])
-        # >>> len(lst)              # Equivalent to lst.__len__()
-        # 0
-        # >>> lst = LinkedList([1, 2, 3])
-        # >>> len(lst)
-        # 3
+        >>> lst = LinkedList([])
+        >>> len(lst)
+        0
+        >>> lst = LinkedList([1, 2, 3])
+        >>> len(lst)
+        3
         """
-        pass
+        if self.is_empty():
+            return 0
 
-    # TODO: implement this method
+        curr = self._first
+        length = 1
+
+        while curr is not None:
+            length += 1
+            curr = curr.next
+
+        return length
+
     def count(self, item: Any) -> int:
         """Return the number of times <item> occurs in this list.
 
@@ -163,9 +171,18 @@ class LinkedList:
         # >>> lst.count(3)
         # 1
         """
-        pass
+        if self.is_empty():
+            return 0
 
-    # TODO: implement this method
+        count = 0
+        curr = self._first
+        while curr is not None:
+            if curr == item:
+                count += 1
+            curr = curr.next
+
+        return count
+
     def index(self, item: Any) -> int:
         """Return the index of the first occurrence of <item> in this list.
 
@@ -182,9 +199,18 @@ class LinkedList:
         # Traceback (most recent call last):
         # ValueError
         """
-        pass
+        if self.is_empty():
+            raise ValueError
 
-    # TODO: implement this method
+        i = 0
+        curr = self._first
+        while curr is not None:
+            if curr == item:
+                return i
+            i += 1
+
+        raise ValueError
+
     def __setitem__(self, index: int, item: Any) -> None:
         """Store item at position <index> in this list.
 

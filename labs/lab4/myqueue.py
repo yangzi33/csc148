@@ -15,17 +15,21 @@ modified.
 from typing import Any, List, Optional
 
 
-# TODO: implement this class! Note that you'll need at least one private
-# attribute to store items.
 class Queue:
     """A first-in-first-out (FIFO) queue of items.
 
     Stores data in a first-in, first-out order. When removing an item from the
     queue, the most recently-added item is the one that is removed.
+    ---- Attributes ----
+    _item:
+        List of items in this Queue
     """
+    _item: List[Any]
+
     def __init__(self) -> None:
         """Initialize a new empty queue."""
         pass
+        self._item = []
 
     def is_empty(self) -> bool:
         """Return whether this queue contains no items.
@@ -37,12 +41,12 @@ class Queue:
         >>> q.is_empty()
         False
         """
-        pass
+        return not self._item
 
     def enqueue(self, item: Any) -> None:
         """Add <item> to the back of this queue.
         """
-        pass
+        self._item.append(item)
 
     def dequeue(self) -> Optional[Any]:
         """Remove and return the item at the front of this queue.
@@ -56,7 +60,8 @@ class Queue:
         >>> q.dequeue()
         'hello'
         """
-        pass
+        if not self.is_empty():
+            return self._item.pop(0)
 
 
 def product(integer_queue: Queue) -> int:
@@ -75,7 +80,12 @@ def product(integer_queue: Queue) -> int:
     >>> q.is_empty()
     True
     """
-    pass
+    r = 1
+
+    while not integer_queue.is_empty():
+        r *= integer_queue.dequeue()
+
+    return r
 
 
 def product_star(integer_queue: Queue) -> int:
@@ -93,7 +103,18 @@ def product_star(integer_queue: Queue) -> int:
     >>> prime_line.is_empty()
     False
     """
-    pass
+    stored = Queue()
+
+    while not integer_queue.is_empty():
+        stored.enqueue(integer_queue.dequeue())
+
+    r = 1
+    while not stored.is_empty():
+        temp = stored.dequeue()
+        r *= temp
+        integer_queue.enqueue(temp)
+
+    return r
 
 
 if __name__ == '__main__':

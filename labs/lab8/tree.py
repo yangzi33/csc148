@@ -163,7 +163,7 @@ class Tree:
                 child_total, child_number = subtree._average_helper()
                 total += child_total
                 number += child_number
-            return (total, number)
+            return total, number
 
     def delete_item(self, item: Any) -> bool:
         """Delete *one* occurrence of the given item from this tree.
