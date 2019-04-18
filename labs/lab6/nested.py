@@ -18,12 +18,13 @@ def add_n(obj: Union[int, List], n: int) -> Union[int, List]:
     >>> add_n([1, 2, [1, 2], 4], 10)
     [11, 12, [11, 12], 14]
     """
-    # if isinstance(obj, int):
-    #     ...
-    # else:
-    #     for sublist in obj:
-    #         ... add_n(sublist) ...
-    pass
+    if isinstance(obj, int):
+        return obj + n
+    else:
+        r = []
+        for sublist in obj:
+            r .append(add_n(sublist, n))
+        return r
 
 
 def nested_list_equal(obj1: Union[int, List], obj2: Union[int, List]) -> bool:
@@ -41,12 +42,16 @@ def nested_list_equal(obj1: Union[int, List], obj2: Union[int, List]) -> bool:
     # HINT: You'll need to modify the basic pattern to loop over indexes,
     # so that you can iterate through both obj1 and obj2 in parallel.
 
-    # if isinstance(obj, int):
-    #     ...
-    # else:
-    #     for sublist in obj:
-    #         ... nested_list_equal(sublist) ...
-    pass
+    if isinstance(obj1, int) or isinstance(obj2, int):
+        return obj1 == obj2
+    elif len(obj1) != len(obj2):
+        return False
+    else:
+        for i in range(len(obj1)):
+            if not nested_list_equal(obj1[i], obj2[i]):
+                return False
+
+        return True
 
 
 def duplicate(obj: Union[int, List]) -> Union[int, List]:
@@ -67,16 +72,17 @@ def duplicate(obj: Union[int, List]) -> Union[int, List]:
     >>> duplicate([1, [2, 3]])  # NOT [1, 1, [2, 2, 3, 3], [2, 2, 3, 3]]
     [1, 1, [2, 2, 3, 3]]
     """
-    # HINT: in the recursive case, you'll need to distinguish between
-    # a <sublist> that is an int and a <sublist> that is a list
-    # (put an isinstance check inside the loop).
+    if isinstance(obj, int):
+        return [obj, obj]
+    else:
+        r = []
+        for sublist in obj:
+            if isinstance(sublist, int):
+                r.extend(duplicate(sublist))
+            else:
+                r.append(duplicate(sublist))
 
-    # if isinstance(obj, int):
-    #     ...
-    # else:
-    #     for sublist in obj:
-    #         ... duplicate(sublist) ...
-    pass
+        return r
 
 
 if __name__ == '__main__':

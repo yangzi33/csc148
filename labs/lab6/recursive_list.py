@@ -155,13 +155,33 @@ class RecursiveList:
         >>> str(lst)
         '100 -> 200 -> 300'
         """
+        i = 0
+        curr = self
+
+        while i != index and curr._rest._first is not None:
+            curr = curr._rest
+            i += 1
+
+        if i == index:
+            curr._first = item
+        else:
+            raise IndexError
 
     def insert_first(self, item: object) -> None:
         """Insert item at the front of this list.
 
         This should work even if this list is empty.
+        >>> lst = RecursiveList([1, 2, 3])
+        >>> lst.insert_first(0)
+        >>> str(lst)
+        '0 -> 1 -> 2 -> 3'
         """
-        pass
+        if self.is_empty():
+            self._first = item
+        # else:
+        #     temp = self._first
+        #     self._first = item
+        # TODO: Recursive Case
 
     def pop(self, index: int) -> Any:
         """Remove and return the item at position <index> in this list.

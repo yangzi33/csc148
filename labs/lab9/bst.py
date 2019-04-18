@@ -126,7 +126,7 @@ class BinarySearchTree:
             self._root, self._left, self._right = \
                 self._left._root, self._left._left, self._left._right
         else:
-            # Both subtrees are non-empty. Can shooe to replace the root
+            # Both subtrees are non-empty. Can choose to replace the root
             # from either the max value of the left subtree, or the min value
             # of the right subtree. (Implementations are very similar.)
             self._root = self._left.extract_max()
@@ -188,7 +188,25 @@ class BinarySearchTree:
         >>> bst.height()
         2
         """
-        pass
+        if self.is_empty():
+            return 0
+
+        if self._right.is_empty() and self._left.is_empty():
+            return 1
+        elif self._right.is_empty():
+            return 1 + self._left.height()
+        elif self._left.is_empty():
+            return 1 + self._right.height()
+        else:
+            return 1 + self._max_height()
+
+    def _max_height(self) -> int:
+        if self._left.is_empty() and self._right.is_empty():
+            return 1
+        else:
+            h = []
+
+
 
     # TODO: implement this method!
     def items_in_range(self, start: Any, end: Any) -> List:
