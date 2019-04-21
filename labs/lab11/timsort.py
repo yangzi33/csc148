@@ -78,12 +78,14 @@ def find_runs(lst: list) -> List[Tuple[int, int]]:
     run_start = 0
     run_end = 1
     while run_end < len(lst):
-        # How can you tell if a run should continue?
-        #   (When you do, update run_end.)
+        if lst[run_end - 1] <= lst[run_end]:
+            run_end += 1
+        else:
+            runs += [(run_start, run_end)]
+            run_start = run_end
+            run_end += 1
 
-        # How can you tell if a run is over?
-        #   (When you do, update runs, run_start, and run_end.)
-        pass
+    return runs + [(run_start, run_end)]
 
 
 ###############################################################################
