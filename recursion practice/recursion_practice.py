@@ -257,7 +257,6 @@ def all_permutation(s):
     """
 
 
-
 def add_one(obj: Union[list, int]) -> None:
     """
     >>> l = [1, [2, 3], 4]
