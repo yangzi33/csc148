@@ -14,11 +14,11 @@ Copyright (c) 2019 Bogdan Simion, Diane Horton, Jacqueline Smith
 import datetime
 import json
 from typing import List, Dict
-from visualizer import Visualizer
 from customer import Customer
 from phoneline import PhoneLine
-from call import Call
 from contract import TermContract, MTMContract, PrepaidContract
+from call import Call
+from visualizer import Visualizer
 
 
 def import_data() -> Dict[str, List[Dict]]:
@@ -106,35 +106,23 @@ def process_event_history(log: Dict[str, List[Dict]],
     handout.
     - The <customer_list> already contains all the customers from the <log>.
     """
-    # TODO: Implement this method. We are giving you the first few lines of code
-    billing_date = datetime.datetime.strptime(log['events'][0]['time'],
-                                              "%Y-%m-%d %H:%M:%S")
-    billing_month = billing_date.month
-
-    # start recording the bills from this date
-    # Note: uncomment the following lines when you're ready to implement this
-    #
-    # new_month(customer_list, billing_date.month, billing_date.year)
-
+    dates = []
     for event_data in log['events']:
-        if event_data["type"] == "call":
-            src_nr = event_data["src_number"]
-            dst_nr = event_data["dst_number"]
-            time = datetime.datetime.strptime(log['events'][0]['time'],
-                                              "%Y-%m-%d %H:%M:%S")
-            duration = event_data["duration"]
-            src_loc = tuple(event_data["src_loc"])
-            dst_loc = tuple(event_data["dst_loc"])
-            call = Call(src_nr, dst_nr, time, duration, src_loc, dst_loc)
-            src_cust = find_customer_by_number(src_nr, customer_list)
-            src_cust.make_call(call)
-            dst_cust = find_customer_by_number(dst_nr, customer_list)
-            dst_cust.receive_call(call)
-        # t = datetime.datetime.strptime(log['events'][0]['time'],\
-        #                                "%Y-%m-%d %H:%M:%S")
-        # if t.month != billing_month:
-        #     billing_month = t.month
-        # new_month(customer_list, billing_date.month, billing_date.year)
+        ty = event_data['type']
+        src_num = event_data['src_number']
+        dst_num = event_data['dst_number']
+        src_loc = event_data['src_loc']
+        dst_loc = event_data['dst_loc']
+        billing_date = datetime.datetime.strptime(event_data['time'],
+                                                  "%Y-%m-%d %H:%M:%S")
+        if (billing_date.month, billing_date.year) not in dates:
+            dates.append((billing_date.month, billing_date.year))
+            new_month(customer_list, billing_date.month, billing_date.year)
+        if ty == 'call':
+            dur = event_data['duration']
+            call = Call(src_num, dst_num, billing_date, dur, src_loc, dst_loc)
+            find_customer_by_number(src_num, customer_list).make_call(call)
+            find_customer_by_number(dst_num, customer_list).receive_call(call)
 
 
 if __name__ == '__main__':
@@ -184,7 +172,6 @@ if __name__ == '__main__':
         v.render_drawables(drawables)
 
     import python_ta
-
     python_ta.check_all(config={
         'allowed-import-modules': [
             'python_ta', 'typing', 'json', 'datetime',

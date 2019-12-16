@@ -107,8 +107,6 @@ class CustomerFilter(Filter):
         except ValueError:
             return data
 
-        if int(filter_string) < 1000 or int(filter_string) > 9999:
-            return data
         cust_calls = []
         count = 0
         for c in customers:
@@ -116,7 +114,7 @@ class CustomerFilter(Filter):
                 count += 1
                 for calls in data:
                     if calls.src_number in c.get_phone_numbers() or\
-                        calls.dst_number in c.get_phone_numbers():
+                            calls.dst_number in c.get_phone_numbers():
                         cust_calls += [calls]
         if count == 0:
             return data
@@ -149,10 +147,11 @@ class DurationFilter(Filter):
         - If the filter string is invalid, your code must not crash, as
         specified in the handout.
         """
-        # TODO: Unit Tests
-        # check if filter_string starts with 'G'/'L
+        # check if filter_string is empty
         if not filter_string:
             return data
+
+        # check if filter_string starts with 'L' or 'G'
         if not (filter_string[0] == 'L' or filter_string[0] == 'G'):
             return data
 

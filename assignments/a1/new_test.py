@@ -25,7 +25,7 @@ Copyright (c) 2019 Bogdan Simion, Diane Horton, Jacqueline Smith
 import datetime
 import pytest
 
-from application import create_customers, process_event_history
+from application1 import create_customers, process_event_history
 from customer import Customer
 from contract import TermContract, MTMContract, PrepaidContract
 from phoneline import PhoneLine
@@ -134,7 +134,7 @@ def test_customer_creation() -> None:
     assert bill[2][1]['total'] == 50
     assert bill[2][2]['total'] == -100
 
-    # Check for the customer creation in application.py
+    # Check for the customer creation in application1.py
     customer = create_customers(test_dict)[0]
     customer.new_month(12, 2017)
     bill = customer.generate_bill(12, 2017)
