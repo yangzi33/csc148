@@ -154,4 +154,4 @@ def _sort_subtrees(tree: TMTree) -> None:
 
 if __name__ == '__main__':
     import pytest
-    pytest.main(['test.py'])
+    pytest.main(['a2_sample_test.py'])
